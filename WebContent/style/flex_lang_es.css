@@ -1,0 +1,64 @@
+@import url("https://fast.fonts.com/t/1.css?apiType=css&projectid=1c3a6904-ecfd-4585-b175-511c2f7287c8");
+
+/*************/
+/* FONT FACE */
+/*************/
+
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
+*/
+
+@font-face {
+    font-family: 'Didot W01 Roman';
+    src: url('/chain/507/shell/dd077a5a-5331-4833-8a24-e3afbe24d92e.eot');
+    src: url('/chain/507/shell/dd077a5a-5331-4833-8a24-e3afbe24d92e.eot?#iefix') format('embedded-opentype'),
+         url('/chain/507/shell/488ffbea-dc53-43b4-a9e2-d5bff132a85d.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LinotypeUniversW01-Ligh 723625';
+    src: url('/chain/507/shell/e89379d2-2604-41ab-911f-cc89f3e4b49b.eot');
+    src: url('/chain/507/shell/e89379d2-2604-41ab-911f-cc89f3e4b49b.eot?#iefix') format('embedded-opentype'),
+         url('/chain/507/shell/dd6ae40f-c627-430f-b5d0-bcdbf4a4d784.ttf') format('truetype');
+}
+
+header ul, #header-lists li a, #header-lists li section h1, .HotelName,
+.TitleSz1, .TitleSz2, .TitlewIconDrk, .TitlewIconLgt, .TitlewIconToggleDrk, .TitlewIconToggleLgt,
+.TitlewBkgDrk, .TitlewBkgLight, .TitlewIconCircleArrow, .TitlewIconArrow, .RoomTotalLbl, .CheckoutSubSection 
+.SubTitlewArrow, .CluetipTitle .PackageCategory, .ModTBStatus, .ItinTotalLbl, .ConfirmationDiv .TitlewBkgDrk.TitleSz1,
+.ui-widget-header, .BEBreadcrumb, .ShopCartLink, .LangDiv .DDListCurrent, .LangDiv a, .LoginDiv a, .WellcomeDiv a, .WellcomeDiv         
+    { font-family: 'LinotypeUniversW01-Ligh 723625'; }
+
+.AvailResultsTitle, .ComparePageTitle, .PackageTitle, .CheckoutTitle, .ResReview .TitleSz1, .ResConfirm .TitleSz1  
+    { font-family:'Didot W01 Roman'; } 
+    
+div#page-wrap .didot-reg a          
+    { font-family: Didot W01 Roman !important; }
+    
+/* Buttons */        
+.ButtonSt1, .ButtonSt2, .PkgTopNoThxBtn, .PkgBtmNoThxBtn, .ReviewBtn 
+    { font-family:'Didot W01 Roman',Arial,Helvetica,sans-serif; }
+
+.ButtonSt4, .ResBtnDiv a, .ui-dialog .ui-dialog-buttonpane button, .ui-dialog .ui-dialog-buttonpane button.ui-state-hover 
+    { font-family:'LinotypeUniversW01-Ligh 723625',Arial,Helvetica,sans-serif; }
+    
+    
+/**************************************/
+/* SPECIAL MODIFICATIONS PER LANGUAGE */
+/**************************************/
+
+.LangDiv { right:191px; }
+
+.LoginDiv, .WellcomeDiv { right:276px; }
+
+.AvailResults .CurrencyDiv { right:198px; }
+.ComparePage .CurrencyDiv { right:242px; top:163px; }
+
+.ProductInfo { max-width: 260px; }
+
+.SelectProductBtn { font-size:19px; }
+
+.CompareSelect { font-size:14px; padding:6px 0; }

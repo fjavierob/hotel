@@ -1,0 +1,46 @@
+# Poner en funcionamiento el servicio web
+
+Abrir 3 terminales (dir raíz del trabajo).
+
+- Terminal 1: Compilar y ubicar servidor.
+
+	make comphotel; make jarhotel; mv hotelwebservice.jar axis-1_4/webapps/
+
+- Terminal 2: Ejecuta servidor.
+
+	cd axis-1_4/webapps/
+
+	java -cp ../lib/axis-ant.jar:../lib/commons-logging-1.0.4.jar:../lib/axis.jar:../lib/jaxrpc.jar:../lib/saaj.jar:../lib/commons-discovery-0.2.jar:../lib/log4j-1.2.8.jar:../lib/wsdl4j-1.5.1.jar:../../lib/mail.jar:../../lib/activation.jar:../../lib/sqlite-jdbc-3.16.1.jar:hotelwebservice.jar:./ org.apache.axis.transport.http.SimpleAxisServer -p 8888
+
+- Terminal 3: Deploy wsdd.
+
+	cd axis-1_4/webapps/
+	
+	java -cp ../lib/axis-ant.jar:../lib/commons-logging-1.0.4.jar:../lib/axis.jar:../lib/jaxrpc.jar:../lib/saaj.jar:../lib/commons-discovery-0.2.jar:../lib/log4j-1.2.8.jar:../lib/wsdl4j-1.5.1.jar:../../lib/mail.jar:../../lib/activation.jar:../../lib/sqlite-jdbc-3.16.1.jar org.apache.axis.client.AdminClient -p 8888 axis/deploy.wsdd
+
+- Terminal 1: Compilar y ejecutar cliente.
+
+	make comphotelcliente
+
+	make exehotelcliente
+
+
+#####################################################
+
+
+# Cuestiones relativas a la base de datos
+
+- Crear base de datos y ubicar db
+
+	sqlite3 hotel.db < creardb.sql
+	mv hotel.db axis-1_4/webapps/
+
+- Consultar base de datos
+
+	cd 	axis-1_4/webapps/
+	sqlite3 hotel.db "SELECT * FROM reservas"
+	sqlite3 hotel.db "SELECT * FROM habitaciones"
+	sqlite3 hotel.db "SELECT * FROM hoteles"
+
+
+

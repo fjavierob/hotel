@@ -1,0 +1,462 @@
+@CHARSET "UTF-8";
+
+.fondo_footer {
+	margin-bottom: 80px;
+}
+
+.pie_de_pagina {
+	margin-top: 12em;
+}
+
+li.reserva {
+	padding-left: 40px;
+}
+
+.contacto {
+	align-content: center;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+div.reserva {
+	float: initial;
+}
+
+a#reservar {
+	color: white;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c39122),
+		color-stop(40%, #c39122), color-stop(60%, #b57e19),
+		color-stop(100%, #b57e19));
+	cursor: auto;
+	font-family: "Didot W01 Roman";
+	font-size: 20px;
+	font-weight: 900;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: center;
+	text-decoration-color: #05e8ff;
+	text-decoration-line: none;
+	text-decoration-style: solid;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	white-space: nowrap;
+	/*width: 149.109px;*/
+	-webkit-font-smoothing: antialiased;
+}
+
+.tituloInicio h1 {
+	font-size: 100px;
+}
+.subtituloInicio
+{
+		margin: auto;
+	margin-bottom: 5%;
+	text-align: center;
+	align-items: center;
+	font-family: "Didot W01 Roman";
+}
+.subtituloInicio h2{
+	font-size: 70px;
+}
+
+.tituloInicio {
+	/* border-bottom: solid 30px;
+    border-top: solid 70px;
+    border-left: solid 60px;
+    border-right: solid 60px;
+    border-color: #d6d5cf; */
+	margin: auto;
+	margin-bottom: 5%;
+	text-align: center;
+	align-items: center;
+	font-family: "Didot W01 Roman";
+	/* font-size: -webkit-xxx-large; */
+}
+
+#flyout_menu {
+	font-weight: 200;
+	width: 200px;
+	visibility: hidden;
+	display: none;
+}
+
+#flyout_menu ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#flyout_menu ul li.hover, #flyout_menu ul li:hover {
+	position: relative;
+	z-index: 599;
+}
+
+#flyout_menu ul ul {
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 598;
+}
+
+#flyout_menu ul li:hover>ul {
+	visibility: visible;
+}
+
+#flyout_menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+#flyout_menu span, #flyout_menu a {
+	display: inline-block;
+	font-family: "Didot W01 Roman";
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#flyout_menu li {
+	background: #47413a;
+}
+
+#flyout_menu li:hover, #flyout_menu li.active {
+	background: #1d1915;
+}
+
+#flyout_menu a {
+	color: #FFF;
+	line-height: 160%;
+	padding: 16px;
+	width: 164px;
+}
+
+#flyout_menu ul ul li {
+	background: #47413a;
+	border-bottom: 1px solid #47413a;
+}
+
+#flyout_menu ul ul li:hover {
+	background: #1d1915;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+body::after {
+	content: '';
+	display: block;
+	height: 100px;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+}
+
+.ir, .phone {
+	direction: ltr
+}
+
+@
+viewport {
+	zoom: 1
+}
+
+img.flecha {
+	
+}
+
+img.flecha.flipped {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+div#contenedor_reservas {
+	float: right;
+	width: 75%;
+}
+
+.calendarDiv {
+	display: block;
+	background: white;
+}
+
+.cabeceraCalendario {
+	float: left;
+	width: 100%;
+}
+
+div.cambiaMes {
+	float: left;
+	width: 20%
+}
+
+div.tituloCalendario {
+	float: left;
+	width: 60%;
+	text-align: center;
+}
+
+div#avanzaMes a {
+	float: right
+}
+
+.progress {
+	width: 80%;
+	background-color: rgb(245, 245, 245);
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px inset;
+	box-sizing: border-box;
+	color: rgb(113, 108, 94);
+	display: block;
+	font-family: sans-serif;
+	font-size: 13px;
+	height: 20px;
+	line-height: 16.003px;
+	margin: 30px auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	overflow-x: hidden;
+}
+
+.progress-bar {
+	background-color: RGB(106, 102, 96);
+	box-shadow: rgba(0, 0, 0, 0.15) 0px -1px 0px 0px inset;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	display: block;
+	float: left;
+	font-family: sans-serif;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	transition-delay: 0s;
+	transition-duration: 0.6s;
+	transition-property: width;
+	transition-timing-function: ease;
+	width: 256px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.LegendItem {
+	width: 33%;
+	float: left;
+}
+
+.LegendItem.SD p {
+	border: 3px solid #986a02;
+	width: 90%;
+}
+
+.LegendItem.OD p {
+	background: #949494;
+	border: 3px solid #949494;
+	color: white;
+	width: 90%;
+}
+
+.LegendItem.NAv p {
+	background: #47413A;
+	border: 3px solid #47413A;
+	width: 90%;
+	color: white;
+}
+
+.compruebaDisp {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c39122),
+		color-stop(40%, #c39122), color-stop(60%, #b57e19),
+		color-stop(100%, #b57e19));
+	display: block;
+	font-family: "Didot W01 Roman";
+	height: 18px;
+	font-size: 0.9em;
+}
+
+.compruebaDisp a {
+	color: white;
+	padding: 8px 12px 4px;
+}
+
+a.compruebaDisp :hover {
+	color: black;
+}
+
+input.fechaReserva {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.contenedorGrandeReservas {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 100px;
+}
+
+#contenedor_fecha {
+	float: left;
+	width: 20%;
+}
+
+.mes {
+	width: 50%;
+	background-color: white;
+}
+
+.mes.izquierdo {
+	float: left;
+}
+
+.mes.derecho {
+	float: right
+}
+
+.cabeceraMes {
+	text-align: center;
+}
+
+.calendario {
+	width: 100%;
+	text-align: center;
+}
+
+table.tablaMes {
+	width: 90%;
+	margin: auto;
+}
+
+.visible {
+	
+}
+
+.oculto {
+	color: white;
+}
+
+.noDisponible {
+	color: white;
+	background-color: #bb1c00;
+}
+
+.seleccionado {
+	background-color: #c39122;
+}
+
+div.oculto {
+	display: none;
+}
+
+.errorFecha{
+	text-align: center;
+}
+
+img#cargando {
+    height: 50%;
+    width: 20%;
+    display: none;
+}
+
+input#nombre{
+	width: 60%;
+}
+
+div#contenedor_habitaciones {
+	float: left;
+	width: 80%;
+	text-align: center;
+}
+
+.cabecera_modificaciones {
+	position: relative;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+h1.titulo_modificaciones {
+	font-size: xx-large;
+	margin-top: 30px;
+}
+
+.contenedor_grande_modificaciones {
+	width: 75%;
+	margin: auto;
+}
+
+.formularios {
+	float: left;
+	width: 25%;
+}
+
+div#resultado_consultas {
+	float: right;
+	width: 75%;
+}
+
+.error_culsuta_codigo {
+	text-align: center;
+	font-size: large;
+}
+
+.parte_izq, .parte_derecha {
+    float: left;
+    width: 50%;
+}
+
+.boton_modificar {
+    float: left;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c39122), color-stop(40%, #c39122), color-stop(60%, #b57e19), color-stop(100%, #b57e19));
+    margin: 0 10px;
+}
+
+.boton_modificar a {
+    margin: 0px 13px;
+    color: white;
+    display: block;
+    padding: 4px 0px;
+}
+input#codigo {
+    float: left;
+    width: 78%;
+}
+
+.texto_y_boton .boton_modificar {
+    width: 80%;
+    text-align: center;
+    float: left;
+    margin: auto;
+}
+
+.boton_modificar a:hover{
+	color: black;
+}
+
+div#confirmar_mes {
+    float: right;
+}

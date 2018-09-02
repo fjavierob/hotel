@@ -1,0 +1,21 @@
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+	xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	
+	<service name="Hotel" provider="java:RPC">
+
+		<parameter name="scope" value="application"/>
+		<parameter name="className" value="hotelwebservice.Hotel"/>
+		<parameter name="allowedMethods" value="*"/>
+
+		<beanMapping qname="ns1:Reserva" 
+			xmlns:ns1="http://www.uc3m.es/WS/Hotel"
+			languageSpecificType="java:hotelwebservice.Reserva"/>
+
+		<arrayMapping qname="ns1:Ocupacion" 
+			xmlns:ns="http://www.uc3m.es/WS/Hotel"
+			languageSpecificType="java:hotelwebservice.Ocupacion" 
+		/>
+
+	</service>
+	
+</deployment>

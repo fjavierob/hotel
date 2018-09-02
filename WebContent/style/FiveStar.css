@@ -1,0 +1,4203 @@
+﻿/**************************/
+/*      RESET STYLES      */
+/**************************/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+}
+
+ul {
+    margin: .6em 0;
+    padding: 0 0 0 2em;
+}
+
+p {
+    margin: 0 0 .6em;
+}
+
+
+/* Clear Floats */
+.clear {
+    clear: both;
+}
+
+
+/* AJAX Transition */
+.AjaxLoad {
+    display: none;
+    position: fixed;
+    z-index: 103;
+    top: 0;
+    left: 0;
+    background: #FFF url("../../../images/5Star/loading_icon_big.png") no-repeat center;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+    .AjaxLoad img {
+        display: none;
+    }
+
+.ModalLoadinSml {
+    background: url("../../../images/5Star/loading_icon_small.png") no-repeat center;
+    width: 16px;
+    height: 16px;
+    margin: 10px 0;
+}
+
+
+#loadingDiv {
+    background: url("../../../images/5Star/loading_icon_big.png") no-repeat center;
+    width: 64px;
+    height: 64px;
+}
+
+    #loadingDiv img {
+        display: none;
+    }
+
+/* Small Loading Icon */
+.SmlLoadingIcon {
+    width: 16px;
+    height: 16px;
+    background: url("../../../images/5Star/loading_icon_small.png") no-repeat;
+    visibility: hidden;
+    margin: 0 0 0 .6em;
+    display: inline-block;
+}
+
+
+
+/**********************/
+/*      BE WIDTH      */
+/**********************/
+
+/* BE Width */
+.CheckAvail, .AvailResults, .CustInfo, .AvailPackages, .ResReview, .ResConfirm, .ResSearch, .ResSearchResults, .ResModify {
+    min-width: 700px;
+    max-width: 960px;
+    text-align: left;
+}
+
+
+
+/**************************/
+/*      Sprite Image      */
+/**************************/
+
+.IconBg, .ToggleArrowDiv_On, .ToggleArrowDiv_Off, .TitlewBkgDrk, .TitlewBkgLight, a.FilterLinkInActive, a.FilterLinkActive,
+.WarningMsg, .ErrorMsg, .ErrorAttn, .reqAsterisk, .ButtonSt1, .ButtonSt2, .ButtonSt3, .ButtonSt4, .ButtonSt4Disabled,
+.VerticalScroll .thumb, .VerticalScroll .thumb .end, .HorizontalScroll .thumb, .HorizontalScroll .thumb .end, .DDListCurrent,
+.BEBreadcrumb li, .BEStep1On, .BEStep2On, .BEStep3On, .BEStep4On, .BEStep5On, .BEStep6On, .activeLink, .nonactiveLink,
+.ModifyLink, .RemoveLink, .RemovePkgLink, .ModifyPkgLink, .CluetipLink, .CluetipLinkNoTxt, .MorePhotosLink, .ProductNamePromo .PromoIcon,
+.ClueTipCloseImg, .MonthlyAvailabilityLink {
+    background-image: url(../../../images/5Star/sprite.png);
+    background-repeat: no-repeat;
+}
+
+
+
+/******************/
+/*      TEXT      */
+/******************/
+
+/* Default Style */
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+
+/* Links */
+a {
+    color: #0074B6;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    a:hover {
+        color: #00588A;
+        text-decoration: none;
+    }
+
+    /* Links Same color as Default Text */
+    a.TxTColor {
+        color: #000;
+        text-decoration: none;
+    }
+
+
+/* Top Header (Hotel Name) */
+.HotelName {
+    font-family: QuattrocentoSansRegular,Arial,Helvetica,sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Bold */
+.TxtBold {
+    font-weight: bold;
+}
+
+/* Italic */
+.TxtItalic {
+    font-style: italic;
+}
+
+/* Bold / Color text */
+.TxtClrBold {
+    color: #3A5E68;
+    font-weight: bold;
+}
+
+/* Big Text (ie: rates, dates) */
+.BigTxt1 {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.BigTxt2 {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+/* Secondary Color (Lighter than Default) */
+.TxtLt {
+    color: #494949;
+}
+
+.TxtLtBold {
+    color: #494949;
+    font-weight: bold;
+}
+
+/* Smaller Font */
+.TxtSml, .TxtSmlBold, .TxtSmlLt, .TxtSmlLtBold {
+    font-size: .9em;
+}
+
+.TxtSmlBold {
+    font-weight: bold;
+}
+
+.TxtSmlLt {
+    color: #494949;
+}
+
+.TxtSmlLtBold {
+    color: #494949;
+    font-weight: bold;
+}
+
+/* Strikeout for Promo Pricing */
+.StrikeOut {
+    text-decoration: line-through;
+}
+
+/* Font used for titles */
+@font-face {
+    font-family: 'QuattrocentoSansRegular';
+    src: url('quattrocentosans-regular-webfont.eot');
+    src: url('quattrocentosans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('quattrocentosans-regular-webfont.woff') format('woff'), url('quattrocentosans-regular-webfont.ttf') format('truetype'), url('quattrocentosans-regular-webfont.svg#QuattrocentoSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Common Styles for all Titles */
+.TitleSz1, .TitleSz2, .TitlewIconDrk, .TitlewIconLgt, .TitlewIconToggleDrk, .TitlewIconToggleLgt,
+.TitlewBkgDrk, .TitlewBkgLight, .TitlewIconCircleArrow, .TitlewIconArrow {
+    color: #3A5E68;
+    font-family: QuattrocentoSansRegular,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+}
+
+/* Title Examples:
+    Example with #:
+        <h2 class="TitlewIconDrk"><span class="IconBg">1</span><span class="TxtTitle">Select your Hotel</span></h2>
+        <h2 class="TitlewIconLgt"><span class="IconBg">1</span><span class="TxtTitle">Select your Hotel</span></h2>
+    Example for collapsible headers:
+        <h2 class="TitlewIconToggleDrk"><span class="ToggleArrowDiv_On"></span><span class="TxtTitle">Optional Fields</span></h2>
+        <h2 class="TitlewIconToggleLgt"><span class="ToggleArrowDiv_Off"></span><span class="TxtTitle">Optional Fields</span></h2>
+    Example for Titles with arrow background:
+        <h2 class="TitlewBkgLight TitleSz1">Your Stay</h2>
+        <h2 class="TitlewBkgDrk TitleSz1">Your Stay</h2>
+        <h3 class="TitlewBkgLight TitleSz2">Room 1</h3>
+        <h3 class="TitlewBkgDrk TitleSz2">Room 1</h3>
+    */
+
+/* Title size 1 */
+.TitleSz1 {
+    font-size: 1.4em;
+    margin: 0 0 .6em;
+}
+
+/* Title size 2 */
+.TitleSz2 {
+    font-size: 1.2em;
+    margin: 0 0 .6em;
+}
+
+/* Subtitle size */
+.SubTitle {
+    color: #494949;
+    font-size: 100%;
+    margin: 0 0 .6em;
+}
+
+
+/* Title with Number, +/- icon or Arrow inside a circle */
+.TitlewIconDrk, .TitlewIconLgt {
+    font-size: 1.2em;
+    margin: 0 0 .6em -15px;
+    overflow: hidden;
+}
+
+.TitlewIconToggleDrk, .TitlewIconToggleLgt {
+    font-size: 1.2em;
+    margin: 0 0 0 -15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.TitlewIconCircleArrow {
+    font-size: 1.4em;
+    margin: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.TitlewIconArrow {
+    font-size: 1.2em;
+    margin: 0 0 .6em;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Step Number Style Dark */
+.TitlewIconDrk .IconBg {
+    color: #FFF;
+    background-position: right -19px; /* sprite */
+}
+
+/* Step Number Style Light */
+.TitlewIconLgt .IconBg {
+    background-position: right -79px; /* sprite */
+}
+
+/* Plus Minus Sign (Hide Show sections) */
+.TitlewIconToggleDrk .ToggleArrowDiv_On {
+    background-position: right -199px; /* sprite */
+}
+
+.TitlewIconToggleDrk .ToggleArrowDiv_Off {
+    background-position: right -139px; /* sprite */
+}
+
+.TitlewIconToggleLgt .ToggleArrowDiv_On {
+    background-position: right -319px; /* sprite */
+}
+
+.TitlewIconToggleLgt .ToggleArrowDiv_Off {
+    background-position: right -259px; /* sprite */
+}
+
+/* Common styles for numbers and +/- icons */
+.IconBg, .TitlewIconToggleDrk .ToggleArrowDiv_Off, .TitlewIconToggleDrk .ToggleArrowDiv_On,
+.TitlewIconToggleLgt .ToggleArrowDiv_Off, .TitlewIconToggleLgt .ToggleArrowDiv_On {
+    padding: .2em .9em .2em 15px;
+    margin: 0 .6em 0 0;
+    display: block;
+    float: left;
+    width: .6em;
+}
+
+/* Arrow Inside Circle (Hide Show sections) */
+.TitlewIconCircleArrow .ToggleArrowDiv_On {
+    background-position: -12px -397px; /* sprite */
+}
+
+.TitlewIconCircleArrow .ToggleArrowDiv_Off {
+    background-position: -12px -367px; /* sprite */
+}
+
+/* Common styles for Arrow Inside Circle */
+.TitlewIconCircleArrow .ToggleArrowDiv_On, .TitlewIconCircleArrow .ToggleArrowDiv_Off {
+    display: block;
+    float: left;
+    width: 12px;
+    height: 1em;
+    margin: 0 .6em 0 0;
+}
+
+/* Arrow No Circle (Hide Show sections) */
+.TitlewIconArrow .ToggleArrowDiv_On {
+    background-position: -12px -458px; /* sprite */
+}
+
+.TitlewIconArrow .ToggleArrowDiv_Off {
+    background-position: -10px -428px; /* sprite */
+}
+
+/* Common styles for Arrow No Circle */
+.TitlewIconArrow .ToggleArrowDiv_On, .TitlewIconArrow .ToggleArrowDiv_Off {
+    display: block;
+    float: left;
+    width: 9px;
+    height: 1em;
+    margin: 0 .6em 0 0;
+}
+
+
+/* Title Text */
+.TitlewIconDrk .TxtTitle, .TitlewIconLgt .TxtTitle, .TitlewIconToggleDrk .TxtTitle, .TitlewIconToggleLgt .TxtTitle {
+    padding: .2em 0;
+    display: inline-block;
+}
+
+/* Title with Arrow Background Dark */
+.TitlewBkgDrk.TitleSz1 {
+    color: #FFF;
+    background-position: right -15px; /* sprite */
+}
+
+.TitlewBkgDrk.TitleSz2 {
+    color: #FFF;
+    background-position: right -17px; /* sprite */
+}
+
+/* Title with Arrow Background Light */
+.TitlewBkgLight.TitleSz1 {
+    background-position: right -75px; /* sprite */
+}
+
+.TitlewBkgLight.TitleSz2 {
+    background-position: right -77px; /* sprite */
+}
+
+/* Common styles for Titles with Arrow Background */
+.TitlewBkgDrk, .TitlewBkgLight {
+    padding: .3em 1.2em .3em 15px;
+    margin: 0 0 .6em -15px;
+    display: inline-block;
+    clear: left;
+}
+
+/* SubHeader with arrow */
+.SubTitlewArrow {
+    color: #494949;
+    margin: 0;
+    font-size: 100%;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 0 15px 0 0;
+}
+
+    .SubTitlewArrow .ToggleArrowDiv_Off, .SubTitlewArrow .ToggleArrowDiv_On {
+        width: 9px;
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+
+    .SubTitlewArrow .ToggleArrowDiv_On {
+        background-position: right -458px; /* sprite */
+    }
+
+    .SubTitlewArrow .ToggleArrowDiv_Off {
+        background-position: right -428px; /* sprite */
+    }
+
+a.FilterLinkInActive, a.FilterLinkInActive:hover, a.FilterLinkActive, a.FilterLinkActive:hover {
+    background-position: right -428px; /* sprite */
+    cursor: pointer;
+    padding: 0 16px 0 0;
+    color: #494949;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/********************************************/
+/*      Errors, Warnings & Validations      */
+/********************************************/
+
+/* Warning Messages */
+.WarningMsg {
+    background-position: -12px -488px; /* sprite */
+    padding: 0 0 0 20px;
+    display: block;
+    color: #494949;
+    font-weight: bold;
+}
+
+/* Error Messages */
+.ErrorMsg {
+    background-position: -12px -549px; /* sprite */
+    padding: 0 0 0 20px;
+    display: block;
+    color: #B21010;
+    font-weight: bold;
+}
+
+    .ErrorMsg span {
+        display: block;
+    }
+
+/* Validation Error Indicator */
+.ErrorAttn {
+    background-position: -12px -551px; /* sprite */
+    width: 12px;
+    height: 12px;
+    margin: 0 0 0 .6em;
+    color: #B21010;
+    font-weight: bold;
+    display: inline-block;
+    text-indent: -9999em;
+}
+
+/* Required Asterix */
+.reqAsterisk {
+    background-position: -12px -650px; /* sprite */
+    width: 10px;
+    height: 10px;
+    color: #3A5E68;
+    font-weight: bold;
+    display: inline-block;
+    text-indent: -9999em;
+    margin: 0 0 0 .3em;
+}
+
+
+
+/*************************/
+/*      Form Styles      */
+/*************************/
+
+.LabelDdlCombo {
+    display: inline-block;
+    padding: 0 1.2em .9em 0;
+}
+
+    .LabelDdlCombo .LabelDdlCombo {
+        padding: 0 .6em 0 0;
+        float: left;
+    }
+
+    .LabelDdlCombo label {
+        display: block;
+        padding: 0 0 3px 0;
+    }
+
+input[type="text"], input[type="password"], textarea, select {
+    border: 1px solid #494949;
+    margin: 0;
+    padding: .2em;
+    outline-style: none;
+}
+
+input[type="text"], input[type="password"] {
+    width: 185px;
+}
+
+.GPostalCode input, .CardNumber input, .CardSecurityCode input, .FromDistance input, .ToDistance input,
+.GMiddleInitial input, .AGMiddleInitial input, .GBirthDate input {
+    width: auto;
+}
+
+select {
+    padding: .1em;
+}
+
+    input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+        border: 2px solid #494949;
+    }
+
+
+
+/*********************/
+/*      Buttons      */
+/*********************/
+
+/* Main Button. i.e: advance to the next step */
+.ButtonSt1 {
+    background-color: #315964;
+    background-position: -12px -725px; /* sprite */
+    border: 1px solid #2B4E57;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* Secondary Button. i.e: go back to previous step */
+.ButtonSt2 {
+    background-color: #636363;
+    background-position: -12px -825px; /* sprite */
+    border: 1px solid #7E827B;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* Disabled Button */
+.ButtonSt3 {
+    background-color: #D8D8D8;
+    background-position: -12px -925px; /* sprite */
+    border: 1px solid #CDCDCD;
+    color: #ADADAD;
+    cursor: default;
+}
+
+/* All buttons */
+.ButtonSt1, .ButtonSt2, .ButtonSt3 {
+    height: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: .1em 1.2em;
+    margin: 3px 3px 3px 1em;
+    -webkit-box-shadow: 0 0 3px 0 #999;
+    -moz-box-shadow: 0 0 3px 0 #999;
+    box-shadow: 0 0 3px 0 #999;
+}
+
+
+/* Small button, this is used to perform secondary action between the page, like edit dates, compare rooms */
+.ButtonSt4 {
+    background-color: #C2C2C2;
+    background-position: -12px -960px; /* sprite */
+    border: 1px solid #7E827B;
+    color: #494949;
+    cursor: pointer;
+}
+
+/* Small button, disabled */
+.ButtonSt4Disabled {
+    background-color: #D8D8D8;
+    background-position: -12px -930px; /* sprite */
+    border: 1px solid #CDCDCD;
+    color: #ADADAD;
+    cursor: default;
+}
+
+.ButtonSt4, .ButtonSt4Disabled {
+    font-size: .9em;
+    font-weight: bold;
+    padding: 0.1em 0.7em;
+    margin: 3px 3px 3px 1em;
+    -webkit-box-shadow: 0 0 3px 0 #999;
+    -moz-box-shadow: 0 0 3px 0 #999;
+    box-shadow: 0 0 3px 0 #999;
+}
+
+a.LinkButtonSt4 {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.LinkButtonSt4, .NoIndent {
+    text-indent: 0;
+}
+
+    a.LinkButtonSt4:hover {
+        color: #494949;
+    }
+
+
+
+/*************************/
+/*      Backgrounds      */
+/*************************/
+
+/* Backgroungs with No Borders */
+.BgNB1 {
+    background: #FBFBFB;
+}
+
+.BgNB2 {
+    background: #F6F5F5;
+}
+
+.BgNB3 {
+    background: #EAEAEA;
+}
+
+.BgNB4 {
+    background: #6D6D6D;
+    color: #FFF;
+}
+
+.BgNB5 {
+    background: #D9D9D9;
+}
+
+
+/* Background with Thin Border */
+.Bg1B1 {
+    background: #FBFBFB;
+    border: 1px solid #EAEAEA;
+}
+
+.Bg1B2 {
+    background: #F6F5F5;
+    border: 1px solid #EAEAEA;
+}
+
+.Bg1B3 {
+    background: #F6F5F5;
+    border: 1px solid #D9D9D9;
+}
+
+.Bg1B4 {
+    background: #EAEAEA;
+    border: 1px solid #D9D9D9;
+}
+
+.Bg1B5 {
+    background: #545454;
+    border: 1px solid #7e827b;
+}
+
+
+/* Background with Thick Border */
+.Bg5B1 {
+    background: #FBFBFB;
+    border: 5px solid #F6F5F5;
+}
+
+.Bg5B2 {
+    background: #F6F5F5;
+    border: 5px solid #EAEAEA;
+}
+
+.Bg5B3 {
+    background: #F6F5F5;
+    border: 5px solid #D9D9D9;
+}
+
+.Bg5B4 {
+    background: #EAEAEA;
+    border: 5px solid #D9D9D9;
+}
+
+/* Margin & Padding for all Sections */
+.BgNB1, .BgNB2, .BgNB3, .BgNB4, .Bg1B1, .Bg1B2, .Bg1B3, .Bg1B4, .Bg5B1, .Bg5B2, .Bg5B3, .Bg5B4 {
+    padding: 3px 10px;
+    margin: 0 0 1em;
+}
+
+
+
+/*********************/
+/*      Borders      */
+/*********************/
+
+/* 1px Top */
+.BorTp1 {
+    border-top: 1px solid #EAEAEA;
+}
+
+.BorTp2 {
+    border-top: 1px solid #D9D9D9;
+}
+
+.BorTp3 {
+    border-top: 1px solid #494949;
+}
+
+/* 1px Right */
+.BorRt1 {
+    border-right: 1px solid #EAEAEA;
+}
+
+.BorRt2 {
+    border-right: 1px solid #D9D9D9;
+}
+
+.BorRt3 {
+    border-right: 1px solid #494949;
+}
+
+/* 1px Bottom */
+.BorBtm1 {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.BorBtm2 {
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.BorBtm3 {
+    border-bottom: 1px solid #494949;
+}
+
+/* 1px Left */
+.BorLft1 {
+    border-left: 1px solid #EAEAEA;
+}
+
+.BorLft2 {
+    border-left: 1px solid #D9D9D9;
+}
+
+.BorLft3 {
+    border-left: 1px solid #494949;
+}
+
+/* 2px Top */
+.Bor2Tp1 {
+    border-top: 2px solid #EAEAEA;
+}
+
+.Bor2Tp2 {
+    border-top: 2px solid #D9D9D9;
+}
+
+.Bor2Tp3 {
+    border-top: 2px solid #494949;
+}
+
+/* 2px Left */
+.Bor2Lft1 {
+    border-left: 2px solid #EAEAEA;
+}
+
+.Bor2Lft2 {
+    border-left: 2px solid #D9D9D9;
+}
+
+.Bor2Lft3 {
+    border-left: 2px solid #494949;
+}
+
+/* 2px Bottom */
+.Bor2Btm1 {
+    border-bottom: 2px solid #EAEAEA;
+}
+
+.Bor2Btm2 {
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.Bor2Btm3 {
+    border-bottom: 2px solid #494949;
+}
+
+
+
+/********************/
+/*      Shadow      */
+/********************/
+
+/* Right and Bottom Shaodow */
+.wShadow1 {
+    -webkit-box-shadow: 3px 3px 5px 0 #999;
+    -moz-box-shadow: 3px 3px 5px 0 #999;
+    box-shadow: 3px 3px 5px 0 #999;
+}
+
+/* Shaodow on all sides */
+.wShadow2 {
+    -webkit-box-shadow: 0 0 5px 0 #999;
+    -moz-box-shadow: 0 0 5px 0 #999;
+    box-shadow: 0 0 5px 0 #999;
+}
+
+
+
+/***********************/
+/*      Scrollbar      */
+/***********************/
+
+/* Common styles for Vertical and Horizontal */
+.VerticalScroll .viewport, .HorizontalScroll .viewport {
+    overflow: hidden;
+    position: relative;
+}
+
+.VerticalScroll .overview, .HorizontalScroll .overview {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+
+/* Vertical */
+.VerticalScroll .scrollbar {
+    background: #AAA;
+    border: 1px solid #A3A3A3;
+    position: relative;
+    margin: 0 0 1em;
+    clear: both;
+    width: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.VerticalScroll .thumb {
+    background-color: #595959;
+    background-position: bottom left; /* sprite */
+    border: 1px solid #323232;
+    width: 11px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    left: -4px;
+    top: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+    .VerticalScroll .thumb .end {
+        background-color: #595959;
+        background-position: top left; /* sprite */
+        overflow: hidden;
+        height: 22px;
+        width: 11px;
+    }
+
+
+/* Horizontal */
+.HorizontalScroll .scrollbar {
+    background: #AAA;
+    border: 1px solid #A3A3A3;
+    position: relative;
+    margin: 0 0 1em;
+    clear: both;
+    height: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.HorizontalScroll .thumb {
+    background-color: #595959;
+    background-position: right -682px; /* sprite */
+    border: 1px solid #323232;
+    height: 11px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+    .HorizontalScroll .thumb .end {
+        background-color: #595959;
+        background-position: -12px -682px; /* sprite */
+        overflow: hidden;
+        height: 11px;
+        width: 22px;
+    }
+
+
+/* Disable Scrollbar when is not used */
+.HorizontalScroll .disable, .VerticalScroll .disable {
+    display: none;
+}
+
+
+
+/***********************************************/
+/*      Top Bar (Property Name and Links)      */
+/***********************************************/
+
+.TopBar {
+    display: table;
+    width: 100%;
+}
+
+.TopBarRow {
+    display: table-row;
+}
+
+.HotelNameAddress {
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 0 0 1em;
+}
+
+.LinksBar {
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 0 0 1em;
+    text-align: right;
+}
+
+    .LinksBar div:first-child {
+        border-left: 0;
+    }
+
+
+
+/*********************************************/
+/*      Hotel Name and Address (Header)      */
+/*********************************************/
+
+.HotelName {
+    display: block;
+}
+
+
+
+/***************************************/
+/*      Top Bar Links & Dropdowns      */
+/***************************************/
+
+.LoginDiv, .WellcomeDiv, .CurrencyDiv, .LangDiv, .ShopCartLinkDiv {
+    display: inline-block;
+    padding: 0 0 0 1em;
+    margin: 0 0 0 1em;
+}
+
+/* Login Link & Itinerary Link */
+.LoginLink, .ShopCartLink {
+    padding: .15em 0;
+}
+
+/* Loyalty Program */
+.ExpiredLoyalty {
+    background: transparent !important;
+    padding: 0 !important;
+    display: inline !important;
+}
+
+.RBBr {
+    margin: 0 0 .4em 0;
+}
+
+/* Selected Currency Code */
+.CurCode {
+    padding: 0.1em 0.6em;
+    margin: 0;
+}
+
+/* Currency Inoformation Popup */
+.CurrConvInfo {
+    width: 16em;
+    text-align: left;
+}
+
+/* Dropdown List (Welcome, Currency & Languages */
+.DDList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+    .DDList li {
+        display: block;
+        position: relative;
+    }
+
+.DDListCurrent {
+    background-position: right -456px; /* sprite */
+    padding: .15em 16px .15em 0;
+    cursor: pointer;
+    display: block;
+}
+
+/* Dropdown list */
+.SubDDList {
+    list-style: none;
+    display: none;
+    margin: 0;
+    padding: .3em;
+    text-align: left;
+    position: absolute;
+    z-index: 4000;
+    right: 0;
+}
+
+.CurSubDdl {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Dropdown list item */
+.SubDDList li {
+    margin: 0;
+    padding: .3em .7em;
+    display: block;
+    white-space: nowrap;
+}
+
+    /* Remove line for first item on the list */
+    .SubDDList li:first-child {
+        border-top: 0;
+    }
+
+    /* Dropdown list item Hover */
+    .SubDDList li:hover {
+        background: #EAEAEA;
+    }
+
+/* Dropdown Language images & Currency Code */
+.SubDDList .LangImg, .CurSubDdl .CurCode {
+    display: inline-block;
+    margin: 0 .6em 0 0;
+}
+
+.CurLink {
+    padding: .2em 0;
+    display: inline-block;
+}
+
+.WellSubDdl {
+    min-width: 250px;
+}
+
+    .WellSubDdl li {
+        white-space: normal;
+    }
+
+
+/************************/
+/*      BREADCRUMB      */
+/************************/
+
+/* Container */
+.BEBreadcrumb {
+    padding: 1px 0;
+    margin: 0 0 1em;
+    font-family: QuattrocentoSansRegular,Arial,Helvetica,sans-serif;
+    font-size: 1.2em;
+    border: 1px solid #C5C5C5;
+    border-width: 1px 0;
+}
+
+    /* Background */
+    .BEBreadcrumb ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 1.6em;
+        background: #EAEAEA;
+    }
+
+    /* Arrow is applied to the left side */
+    .BEBreadcrumb li {
+        display: block;
+        float: left;
+        padding: 0 0 0 7px;
+        height: 1.6em;
+        background-position: -12px -1039px; /* sprite */
+    }
+
+        /* First Step doesnt need an arrow */
+        .BEBreadcrumb li.Step1 {
+            padding: 0;
+            background: transparent;
+        }
+
+/* Current Step Arrow pointing down */
+.BEStep1On, .BEStep2On, .BEStep3On, .BEStep4On, .BEStep5On, .BEStep6On {
+    padding: 0 0 6px;
+    height: 1.95em;
+    background-position: center bottom; /* sprite */
+}
+
+/* Current Step */
+.BEBreadOn {
+    display: block;
+    margin: 0 .6em;
+    padding: .6em .6em .65em;
+    height: 1em;
+    position: relative;
+    top: -.3em;
+    background: #494949;
+    color: #FFF;
+    font-weight: bold;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/* Previous Step */
+.BEBreadBk {
+    display: block;
+    margin: 0 .6em;
+    padding: .6em .6em .65em;
+    height: 1em;
+    position: relative;
+    top: -.3em;
+    background: #E0E0E0;
+    color: #0074b6;
+    font-weight: normal;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/* Following Step */
+.BEBreadFwd {
+    display: block;
+    padding: .3em .6em;
+    height: 1em;
+    color: #494949;
+}
+
+
+
+/*********************************************/
+/*    Select Dates Step - Horizontal Cal     */
+/*********************************************/
+
+/* Left Column */
+.HotelDiv, .DatesDiv, .QuantitiesDiv, .CodesDiv, .FiltersDiv {
+    width: 23.4em;
+    float: left;
+    clear: left;
+    margin: 0 1em 0 0;
+}
+
+/* Make sure the hotel list is not bigger than the available space */
+.HotelDDL {
+    max-width: 20em;
+}
+
+/* Right Column */
+.CalendarDiv {
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Reset default style for Nights Label/DDL */
+.HorizCal .LabelDdlCombo.Nights {
+    padding: 0 0 .9em 0;
+}
+
+/* Continue button and modify res link */
+.HorizButtonLink {
+    text-align: right;
+    margin: 1em 0 0 0;
+}
+
+
+
+/**********************************************/
+/*      Select Dates Step - Vertical Cal      */
+/**********************************************/
+
+/* Left Column */
+.VerticalCal .HotelDiv, .VerticalCal .DatesDiv, .VerticalCal .QuantitiesDiv, .VerticalCal .CodesDiv, .VerticalCal .FiltersDiv {
+    width: 43em;
+}
+
+/* Make sure the hotel list is not bigger than the available space */
+.VerticalCal .HotelDDL {
+    max-width: 39em;
+}
+
+/* Remove right padding from the last item in the row */
+.VerticalCal .LabelDdlCombo.Departure, .VerticalCal .LabelDdlCombo.IataCode {
+    padding: 0 0 0.9em;
+}
+
+/* Reduce size so all 3 fields fit in 1 line */
+.VerticalCal .CodesContainer input[type="text"] {
+    width: 147px;
+}
+
+/* Filter List can be displayed in 2 columns */
+.VerticalCal .FilterList {
+    float: left;
+    width: 50%;
+}
+
+    .VerticalCal .FilterList li {
+        padding: 0 3em 0 0;
+    }
+
+/* Continue button and modify res link */
+.VertButtonLink {
+    width: 45em;
+    text-align: right;
+    margin: 1em 0 0 0;
+    float: left;
+    clear: left;
+}
+
+
+
+/*****************************/
+/*      Criteria Search      */
+/*****************************/
+
+/* Align Calendar icon with field */
+.calendars-trigger {
+    margin: 0 0 0 .6em;
+}
+
+/* Float Adult, Children and Child Ages next to Rooms */
+.Rooms, .GuestRoomGroup {
+    float: left;
+}
+
+/* Room and Children Age repeater layout as table */
+.AdultChildGroup {
+    display: table;
+}
+
+/* Adult/Children per room and Children Age per room layout as table row */
+.RoomRepeater {
+    display: table-row;
+}
+
+    /* DDL containers layout as table cells */
+    .RoomNumberCell, .RoomRepeater .LabelDdlCombo {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+.RoomNumberCell {
+    padding: .5em 0 0;
+}
+
+.AdultChildGroup .RoomRepeater:first-child .RoomNumberCell {
+    padding: 1.8em 0 0 0;
+}
+
+.RoomCriteriaLabel {
+    padding: 0 .6em 0 0;
+    display: block;
+}
+
+/* Temporary Child Ages Styles */
+/* Adult/Children group needs to be in its own line when Child Ages is active */
+.HorizCal .GuestRoomAgesGroup, .EditeDates .GuestRoomAgesGroup {
+    clear: both;
+}
+
+.ChildrenAgeGroup {
+    padding: 0 0 .9em 0;
+}
+
+.ChildAgesSection {
+    display: table;
+}
+
+.CriteriaCell {
+    display: table-row;
+}
+
+.ChildNumberCell, .ChildDdlCell {
+    display: table-cell;
+    padding: 0 .6em .4em 0;
+}
+
+/* Optional Fields */
+.CodesContainer {
+    padding: .9em 0 0 0;
+}
+
+
+
+/*************************************/
+/*      Criteria Search Filters      */
+/*************************************/
+
+.FiltersContainer {
+    padding: .9em 0 0;
+}
+
+/* Filter Individual container */
+.RateFilterDiv, .RoomTypeDiv, .RoomFeatDiv {
+    margin: 0 0 0.6em;
+    padding: 0.6em 0 0;
+}
+
+.FiltersContainer div:first-child {
+    border-top: 0;
+    padding: 0;
+}
+
+/* Unorderlist style */
+.FilterList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.FilterListMargin {
+    margin: .6em 0 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.FilterPopup .FilterListMargin {
+    margin: .6em 0;
+}
+
+/* Align Checkbox with label */
+.FilterList li span {
+    display: block;
+    padding: 0 0 .3em 18px;
+    text-indent: -18px;
+}
+
+    .FilterList li span input {
+        vertical-align: middle;
+        margin: 0 5px 0 0;
+        padding: 0;
+        width: 13px;
+        height: 13px;
+    }
+
+    .FilterList li span label {
+        vertical-align: middle;
+    }
+
+/* Filter as Popup container style */
+.FilterPopup {
+    position: absolute;
+    float: left;
+    display: none;
+    z-index: 4500;
+    margin: 0.3em 0 0 2em;
+    padding: 10px;
+}
+
+/* Display list in 2 columns for popup version */
+.HorizCal .FilterPopup .FilterList,
+.VerticalCal .FilterPopup .FilterList {
+    float: left;
+    width: auto;
+}
+
+    .HorizCal .FilterPopup .FilterList li,
+    .VerticalCal .FilterPopup .FilterList li {
+        padding: 0 3em 0 0;
+    }
+
+/* Popup Close arrow and Buttons*/
+.FilterClose, .FilterBtnDiv {
+    text-align: right;
+    clear: both;
+}
+
+/* Rate Filter as Dropdown list */
+.RatesFilter.LabelDdlCombo {
+    padding: 0;
+    margin: 0;
+}
+
+/* Rate Credential ID container with Checkboxes */
+.CredentialIDUL.LabelDdlCombo {
+    padding: 0 0 0 18px;
+}
+
+/* Rate Credential ID container with Dropdown */
+.CredentialIDDDL.LabelDdlCombo {
+    padding: 0;
+    margin: .6em 0 0;
+}
+
+/* Rate Credential ID Tooltip */
+.CredentialInfo {
+    white-space: nowrap;
+    margin: 0;
+}
+
+
+
+/**************************************/
+/*      Calendar loading overlay      */
+/**************************************/
+
+.CalLoading {
+    height: 100%;
+    width: 100%;
+    filter: alpha(opacity=85);
+    opacity: 0.85;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 5000;
+}
+
+.LoadingCalMsg {
+    background: url("../../../images/5Star/loading_icon.png") no-repeat center top;
+    padding: 60px 1em 1em;
+    position: relative;
+    text-align: center;
+    top: 25%;
+}
+
+
+
+/**********************/
+/*      Calendar      */
+/**********************/
+
+/* Reset Jquery UI borders */
+.ui-datepicker-calendar .ui-state-default {
+    border: 0;
+}
+
+/* Reset JQuery UI link styles */
+.ui-datepicker td span, .ui-datepicker td a {
+    text-decoration: none !important;
+    color: inherit;
+    margin: 0;
+    padding: 9px 3px;
+}
+
+/* Overwritte styles for Datepicker dates */
+.calendars-popup .ui-datepicker td a, .calendars-popup .ui-datepicker td span {
+    padding: 3px;
+}
+
+.calendars-popup .ui-datepicker {
+    width: 18em !important;
+}
+
+
+/* Calendar with Pricing */
+
+/* Days in the past and unselected dates */
+.CalwPrice .ui-datepicker td {
+    vertical-align: top;
+}
+
+    .CalwPrice .ui-datepicker td span, .CalwPrice .ui-datepicker td a {
+        padding: 4px 3px;
+        margin: 0;
+        height: 3.8em;
+    }
+
+/* Selected Dates */
+.CalwPrice .ui-datepicker-calendar .ui-state-active {
+    padding: 1px 3px;
+}
+
+/* Day */
+.CalwPrice .ui-datepicker td span.DayNum {
+    text-align: right;
+    padding: 0;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    height: auto;
+}
+
+/* Price */
+.CalwPrice .ui-datepicker td span.DayPrice {
+    text-align: center;
+    padding: 0;
+    margin: 10% 0 0;
+    height: auto;
+    font-size: 0.9em;
+}
+
+/* Hide Price span in datepicker */
+.calendars-popup .DayPrice {
+    display: none;
+}
+
+
+/* Calendar Restriction Colors */
+
+.ui-state-default.BECalOpen, .BECalOpen {
+    background: #7CB250;
+}
+
+    .ui-state-default.BECalOpen span {
+        color: #FFF;
+    }
+
+.ui-state-default.BENoAvail, .BENoAvail {
+    background: #C88C68 url(../../../images/5Star/noavail_x.png) no-repeat center;
+}
+
+    .ui-state-default.BENoAvail span {
+        color: #FFF;
+    }
+
+.ui-state-default.BEMinLen, .BEMinLen {
+    background: #5C86CC;
+}
+
+    .ui-state-default.BEMinLen span {
+        color: #FFF;
+    }
+
+.ui-state-default.BENoArrive, .BENoArrive {
+    background: #EBE141;
+}
+
+    .ui-state-default.BENoArrive span {
+        color: #000;
+    }
+
+/* Selected Dates */
+.ui-datepicker-calendar .ui-state-active, .SelectedDates {
+    border: 3px solid #4A4D4D;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    padding: 6px 0;
+}
+
+
+/* Calendar Restriction Symbols */
+
+.ui-state-default.BECalOpenSymbols, .BECalOpenSymbols {
+    background: url(../../../images/5Star/open.png) no-repeat bottom center;
+}
+
+.ui-state-default.BENoAvailSymbols, .BENoAvailSymbols {
+    background: url(../../../images/5Star/noavail.png) no-repeat bottom center;
+}
+
+.ui-state-default.BEMinLenSymbols, .BEMinLenSymbols {
+    background: url(../../../images/5Star/minstay.png) no-repeat bottom center;
+}
+
+.ui-state-default.BENoArriveSymbols, .BENoArriveSymbols {
+    background: url(../../../images/5Star/noarrive.png) no-repeat bottom center;
+}
+
+
+/* Calendar Restriction Symbols & Price */
+.CalwPrice .ui-state-default.BECalOpenSymbols, .BECalOpenSymbols {
+    background: url(../../../images/5Star/open.png) no-repeat top left;
+}
+
+.CalwPrice .ui-state-default.BENoAvailSymbols, .BENoAvailSymbols {
+    background: url(../../../images/5Star/noavail.png) no-repeat top left;
+}
+
+.CalwPrice .ui-state-default.BEMinLenSymbols, .BEMinLenSymbols {
+    background: url(../../../images/5Star/minstay.png) no-repeat top left;
+}
+
+.CalwPrice .ui-state-default.BENoArriveSymbols, .BENoArriveSymbols {
+    background: url(../../../images/5Star/noarrive.png) no-repeat top left;
+}
+
+/* Text Color */
+.ui-state-default.BECalOpenSymbols span, .ui-state-default.BENoAvailSymbols span, .ui-state-default.BEMinLenSymbols span, .ui-state-default.BENoArriveSymbols span {
+    color: #494949;
+}
+
+
+/* Paddings & Borders only Symbols */
+.CalwSymbols .ui-datepicker td a {
+    padding: 5px 3px 20px;
+    border: 1px solid #d9d9d9;
+}
+
+.CalwSymbols .ui-datepicker td span {
+    padding: 6px 4px 21px;
+}
+
+    .CalwSymbols .ui-datepicker td span span, .CalwSymbols .ui-datepicker td a span {
+        padding: 0;
+        border: 0;
+    }
+
+.CalwSymbols .ui-datepicker-calendar a.ui-state-active {
+    padding: 4px 2px 19px;
+}
+
+/* Selected Dates */
+.CalwSymbols .ui-datepicker-calendar a.ui-state-active, .CalwSymbols .SelectedDates {
+    border: 2px solid #4A4D4D;
+}
+
+.CalwPrice.CalwSymbols .ui-datepicker-calendar a.ui-state-active {
+    padding: 4px 2px;
+}
+
+
+/* Paddings & Borders Symbols & Price */
+.CalwPrice.CalwSymbols .ui-datepicker td a {
+    padding: 5px 3px;
+    border: 1px solid #d9d9d9;
+}
+
+.CalwPrice.CalwSymbols .ui-datepicker td span {
+    padding: 6px 4px;
+}
+
+    .CalwPrice.CalwSymbols .ui-datepicker td span span, .CalwPrice.CalwSymbols .ui-datepicker td a span {
+        padding: 0;
+        border: 0;
+    }
+
+/* Selected Dates */
+.CalwPrice.CalwSymbols .ui-datepicker-calendar a.ui-state-active, .CalwPrice.CalwSymbols .SelectedDates {
+    border: 2px solid #4A4D4D;
+}
+
+.CalwPrice.CalwSymbols .ui-datepicker-calendar a.ui-state-active {
+    padding: 4px 2px;
+}
+
+
+/* Weekends and Holidays */
+.BEWeekEndHeaderDay1, .BEWeekEndDay1 span.DayNum {
+    color: #0055be;
+    font-weight: bold;
+}
+
+.BEWeekEndHeaderDay2, .BEWeekEndDay2 span.DayNum {
+    color: #d70a0a;
+    font-weight: bold;
+}
+
+.BEHoliday span.DayNum {
+    color: #ed9202;
+    font-weight: bold;
+}
+
+
+/* Calendar Legend */
+.CalLegendCodes {
+    clear: right;
+}
+
+/* Legend Icon/Text */
+.LegendItem {
+    margin: 0 3em .6em 0;
+    float: left;
+    white-space: nowrap;
+}
+
+/* Legend Icon */
+.LgndImg {
+    width: 15px;
+    height: 15px;
+}
+
+.CalwSymbols .LgndImg {
+    width: 11px;
+    height: 11px;
+    background-position: center;
+}
+
+.SelectedDates.LgndImg {
+    width: 9px;
+    height: 9px;
+}
+
+.CalwSymbols .SelectedDates.LgndImg {
+    width: 7px;
+    height: 7px;
+}
+
+
+/* Calendar Refresh button and Instructions */
+.RefreshCal {
+    margin: 0;
+    float: left;
+}
+
+.CalInsDiv {
+    float: left;
+    margin: 0 0 0 .6em;
+}
+
+    .CalInsDiv span {
+        display: block;
+        margin: 0 0 .6em;
+    }
+
+
+
+/**************************************/
+/*      TRIP SUMMARY (YOUR STAY)      */
+/**************************************/
+
+.YourStay {
+    width: 20em;
+    margin: 0 1em 1em 0;
+    float: left;
+    clear: left;
+}
+
+/* Hide Modify Criteria */
+.EditeDates {
+    display: none;
+}
+
+/* Margin for Modify Stay buttons */
+.ModifyStayBtn, .SaveModifySearch {
+    margin: 0 0 .6em;
+}
+
+/* Each Item in the summary is enclosed in its own div */
+.SummaryInfoCombo {
+    margin: 0 0 .9em;
+}
+
+.StayLabel {
+    padding: 0 0 3px;
+    display: block;
+}
+
+.NumNights .StayLabel {
+    display: inline;
+}
+
+.StayValue {
+    display: block;
+}
+
+/* Calendar Style Dates Div */
+.DynamicArrivalDt, .DynamicDepartureDt, .StaticArrivalDt, .StaticDepartureDt {
+    float: left;
+    text-align: center;
+}
+
+.DynamicArrivalDt {
+    margin: 0 1.8em 1.2em 0;
+}
+
+.StaticArrivalDt {
+    margin: 0 3em 1.2em 0;
+}
+
+.DynamicDepartureDt, .StaticDepartureDt {
+    margin: 0 0 1.2em 0;
+}
+
+    .DynamicArrivalDt table, .DynamicDepartureDt table,
+    .StaticArrivalDt table, .StaticDepartureDt table,
+    .DynamicDate table {
+        margin: 0 auto;
+    }
+
+/* Div that contains the month date and year */
+.DateDiv {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    -webkit-box-shadow: 0 0 3px 0 #999;
+    -moz-box-shadow: 0 0 3px 0 #999;
+    box-shadow: 0 0 3px 0 #999;
+}
+
+.MonthYear {
+    margin: 0;
+    padding: .3em .6em;
+}
+
+.Day {
+    display: block;
+    margin: 0;
+    padding: .1em .6em;
+}
+
+/* Links to change dates */
+.activeLink, .nonactiveLink {
+    width: 8px;
+    height: 30px;
+    float: left;
+}
+
+    .activeLink.DateBack {
+        background-position: -142px -648px; /* sprite */
+        margin: 0 3px 0 0;
+    }
+
+    .activeLink.DateFwd {
+        background-position: -160px -648px; /* sprite */
+        margin: 0 0 0 3px;
+    }
+
+    .nonactiveLink.DateBack {
+        background-position: -177px -648px; /* sprite */
+        cursor: default;
+        margin: 0 3px 0 0;
+    }
+
+    .nonactiveLink.DateFwd {
+        background-position: -195px -648px; /* sprite */
+        cursor: default;
+        margin: 0 0 0 3px;
+    }
+
+
+/* Guest for MultiRoom Bookings */
+.GuestMultiRoomCombo {
+    padding: 0 0 .3em;
+}
+
+/* Summary Total Price */
+.RoomTotalPrice {
+    padding: .9em 0 .6em;
+}
+
+.YSPriceSummary {
+    padding: .9em 0 .6em;
+    float: left;
+    width: 100%;
+}
+
+.PackagePriceRow, .FeeRow {
+    float: left;
+    width: 100%;
+}
+
+.RoomTotalLabel, .RoomChargesLabel, .PackagePriceLabel, .TaxLabel, .FeeLabel, .PointsLabel {
+    float: left;
+    display: block;
+}
+
+.RoomTotalValue, .RoomChargesValue, .PackagesPriceValue, .TaxValue, .FeeValue, .RoomTotalTxt, .PointsValue {
+    float: right;
+}
+
+.PriceBreackDownLink {
+    text-align: right;
+    margin: .3em 0 0 0;
+}
+
+.CurrencyWarning {
+    display: block;
+    margin: 0 0 .6em;
+}
+
+.RoomChargesPoints {
+    text-align: right;
+}
+
+.GuestBalance {
+    overflow: hidden;
+    margin: 0 0 .9em;
+}
+
+.ReedemableItem {
+    overflow: hidden;
+    margin: .3em 0;
+}
+
+.TotalRedeemed, .ItinTotalPoints {
+    overflow: hidden;
+    margin: .6em 0 0;
+    padding: 0.9em 0;
+}
+
+.TotalPoints {
+    text-align: right;
+}
+
+/* Reservation Status */
+.YourStay .ResStatus {
+    margin: 0 0 .6em;
+    display: block;
+}
+
+
+/* Modify Stay */
+.EditOptionalFields {
+    margin: .3em 0 1.2em;
+}
+
+.EditFilters {
+    margin: 0 0 1.2em;
+}
+
+
+/* Checkout Summary */
+.StayCheckout {
+    width: 20em;
+    clear: left;
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+    /* Remove YourStay div styles for Checkout */
+    .StayCheckout .YourStay {
+        float: none;
+        margin: 0 0 1em;
+        padding: 0;
+        border: 0;
+        width: auto;
+        background: transparent;
+    }
+
+/* Checkout Buttons */
+.CheckOutBtns {
+    display: inline-block;
+}
+
+    .CheckOutBtns .ModifyLink {
+        background-position: -117px -650px; /* sprite */
+        text-indent: -9999em;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+    }
+
+    .CheckOutBtns .RemoveLink {
+        background-position: -91px -649px; /* sprite */
+        text-indent: -9999em;
+        width: 16px;
+        height: 16px;
+        margin: 0 0 0 .6em;
+        display: inline-block;
+    }
+
+.RemovePkgLink {
+    background-position: -70px -649px; /* sprite */
+    text-indent: -9999em;
+    width: 12px;
+    margin: 0 0 0 .3em;
+    display: inline-block;
+}
+
+.ModifyPkgLink {
+    background-position: -70px -667px; /* sprite */
+    text-indent: -9999em;
+    width: 14px;
+    margin: 0 0 0 .3em;
+    display: inline-block;
+}
+
+/*Itinerary Total Price */
+.ItinTotalPrice {
+    padding: .9em 0;
+}
+
+.ItinTotalLbl {
+    float: left;
+}
+
+.ItinTotalTxt, .RedeemedPointsSummaryValue {
+    float: right;
+}
+
+.ItinTotalPointsTxt {
+    text-align: right;
+    clear: both;
+}
+
+/* Book Another Room Button */
+.AddRoomBtn {
+    margin: 0 0 .6em;
+}
+
+
+
+/*********************/
+/*      Cluetip      */
+/*********************/
+
+/* Basic Styles that any cluetip would need */
+#cluetip-waitimage {
+    width: 48px;
+    height: 48px;
+    background: url("../../../images/5Star/loading_icon.png") no-repeat center center;
+}
+
+#cluetip-extra {
+    display: none;
+}
+
+#cluetip-outer {
+    float: left;
+    min-width: 250px;
+}
+
+/* Summary Cluetip Link */
+.CluetipLink {
+    background-position: right -611px; /* sprite */
+    padding: 0 18px 0 0;
+    display: inline-block;
+}
+
+.CluetipLinkNoTxt {
+    background-position: right -612px; /* sprite */
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin: 0 0 0 .6em;
+}
+
+/* Summary Cluetip Box */
+.Cluetip {
+    text-align: justify;
+    padding: 10px;
+}
+
+.YourStay .Cluetip, .StayCheckout .Cluetip {
+    min-width: 400px;
+}
+
+/* Summary Cluetip Title */
+.CluetipTitle {
+    margin: 0 0 .6em;
+    padding: 0 0 .3em;
+}
+
+    .CluetipTitle .PackageTitle {
+        float: left;
+    }
+
+    .CluetipTitle .PackageCategory {
+        display: block;
+    }
+
+    .CluetipTitle .PackagePrice {
+        float: right;
+    }
+
+/* Summary Cluetip Image */
+.CluetipImg {
+    float: right;
+    padding: 4px;
+    margin: 0 0 .6em 1em;
+    width: 150px;
+    height: auto;
+}
+
+/* Summary Descriptions */
+.CluetipDescription span {
+    display: block;
+}
+
+.CluetipDescription .PackageDate, .CluetipDescription .PackageTime {
+    margin: .3em 0 0;
+}
+
+.CluetipDescription .PackagePolicy {
+    margin: .6em 0 0;
+    padding: .6em 0 0;
+}
+
+.CluetipDescription .CouponCode, .CluetipDescription .CouponBookDate {
+    margin: 0 0 .3em;
+}
+
+.CluetipDescription .CouponDescription {
+    padding: 0 0 .6em;
+    margin: 0 0 .6em;
+}
+
+
+/* Sticky Cluetip Close Icon */
+#cluetip-close {
+    float: right;
+    padding: 10px 10px 0 0;
+}
+
+.ClueTipCloseImg {
+    height: 9px;
+    width: 9px;
+    background-position: -51px -650px; /* sprite */
+}
+
+/* Max # of rooms to compare */
+.MaxCompareBtnDiv {
+    margin: .6em 0 0 12px;
+}
+
+
+
+/************************************************/
+/*      No Availability / Alt Availability      */
+/************************************************/
+
+.NoAvailContainer {
+    padding: 10px;
+}
+
+.ReturntoCriteria {
+    margin: 0 0 1em;
+}
+
+.NearestDateCalendar {
+    margin: 1em 0 0;
+    padding: 1em 0 0;
+}
+
+.Destination {
+    overflow: hidden;
+}
+
+.AltAvailBtn {
+    float: right;
+}
+
+
+
+/************************/
+/*      Hotel List      */
+/************************/
+
+.ResultsHotelList {
+    overflow: hidden;
+}
+
+.ResultsHotelList {
+    padding: 0;
+}
+
+.HotelContainer {
+    margin: 1.2em 0;
+    padding: 1.2em 1em 0;
+}
+
+.HotelList .HotelContainer:first-child {
+    border-top: 0;
+    padding: 0 1em;
+}
+
+.HotelImg {
+    float: left;
+    margin: 0 1em 0 0;
+    padding: 4px;
+}
+
+.HotelInfo {
+    overflow: hidden;
+}
+
+    .HotelInfo p {
+        margin: 0;
+    }
+
+    .HotelInfo .HotelName {
+        float: left;
+    }
+
+    .HotelInfo .HotelPrice {
+        float: right;
+    }
+
+    .HotelInfo .HotelAddressDesc {
+        float: left;
+        clear: left;
+    }
+
+    .HotelInfo .HotelPhoneLine span:first-child {
+        border-left: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .HotelInfo .HotelPhone, .HotelInfo .HotelRezPhone, .HotelInfo .HotelFax {
+        padding: 0 0 0 .6em;
+        margin: 0 0 0 .6em;
+    }
+
+.SelectHotel {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+p.HotelDescriptionLine {
+    margin: .6em 0 0 0;
+}
+
+/* Hotel list pagination */
+.ListPaginationTop, .ListPaginationBtm {
+    padding: 1em;
+}
+
+.PagPrevLink {
+    margin: 3px;
+}
+
+.PagNxtLink {
+    float: right;
+}
+
+
+
+/**********************************/
+/*      Availability Results      */
+/**********************************/
+
+/*Refresh Results when chaning dates */
+.LoadingNewResults {
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+/* Right Column */
+.ResultsContainer {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Page Title */
+.AvailResultsTitle {
+    float: left;
+    margin: 0 0 .6em;
+}
+
+/* Compare Rooms Button */
+.CompareBtn {
+    float: right;
+    margin: 3px 3px 1em;
+}
+
+
+/* Rooms free due to Certificates message */
+.CertificateInfo {
+    margin: 0 0 1em;
+}
+
+/* Product Sorting Tabs */
+.ProductSorting {
+    clear: left;
+}
+
+.SelectedTab, .UnselectedLink {
+    margin: 0 .6em 0 0;
+    padding: 5px 10px;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+
+/* List of Products */
+.ProductsList {
+    padding: 0;
+}
+
+    /* Remove borders from the first category in the list */
+    .ProductsList div:first-child {
+        border-top: 0;
+    }
+
+/* Category information container */
+.ProductsHeader {
+    padding: .9em;
+    margin: 0;
+}
+
+.HeaderInfoContainer {
+    overflow: hidden;
+}
+
+/* Wrap Category information around price */
+.HeaderInfo {
+    display: inline;
+}
+
+/* Align Price to the right */
+.HeaderPrice {
+    float: right;
+    margin: 0 0 .6em .6em;
+}
+
+.HeaderProductLoyaltyPrice {
+    text-align: right;
+}
+
+/* Category description container */
+.HeaderDesc {
+    margin: 0 0 .3em;
+}
+
+    .HeaderDesc span {
+        display: block;
+    }
+
+/* View Available Products */
+.ViewProductsBtn, .HideProductsBtn {
+    margin: .6em 0 0;
+}
+
+/* Rate Policy to display all in 1 line */
+.PolicyTxt {
+    display: inline;
+}
+
+/* Product Container */
+.ProductContainer {
+    padding: 1em;
+}
+
+/* Product Image */
+.ProductImg {
+    padding: 4px;
+    margin: 0 0 .3em;
+    display: block;
+    cursor: pointer;
+}
+
+/* Product Right Column */
+.ProductInfoContainer {
+    margin: 0 0 .6em;
+    overflow: hidden;
+}
+
+/* Wrap product info around compare checkbox */
+.ProductInfo {
+    display: inline;
+}
+
+/* Product Name */
+.ProductName .TitleSz2, .ProductNamePromo .TitleSz2 {
+    margin: .4em 0;
+}
+
+.ProductNamePromo .PromoIcon {
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 .6em;
+    display: inline-block;
+    background-position: -342px -649px; /* sprite */
+}
+
+.ProductInfo li {
+    list-style: inside;
+}
+
+/* Compare Checkbox */
+.CompareCheck {
+    float: right;
+    margin: 0 0 .6em .6em;
+}
+
+.CompareCheckbox input {
+    margin: 0 .3em 0 0;
+    position: relative;
+    top: 2px;
+}
+
+.CompareBtnProduct {
+    margin: 3px;
+}
+
+/* Product Description, policy and promotion container */
+.ProductDescription, .ProductInfo .Policies {
+    margin: 0 0 .6em;
+}
+
+    .ProductDescription span {
+        display: block;
+    }
+
+/* Product Price Container */
+.ProductPriceGroup {
+    float: right;
+    clear: right;
+}
+
+.MonthlyAvailabilityLink {
+    background-position: -383px -650px; /* sprite */
+    text-indent: -9999em;
+    width: 17px;
+    height: 17px;
+    display: block;
+    float: left;
+    margin: 0.2em 1.2em 0 0;
+    text-align: left;
+}
+
+.SelectProduct .MonthlyAvailabilityLink {
+    float: none;
+    display: inline-block;
+    margin: 0 0 0 .3em;
+}
+
+.ProductPriceDiv {
+    text-align: left;
+    float: right;
+}
+
+    .ProductPriceDiv span:first-child {
+        border-top: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+.ProductLoyaltyPointsPrice {
+    text-align: right;
+}
+
+/* Total Charge*/
+
+.TotalCharge {
+    float: right;
+    clear: both;
+    margin: 0.6em 0 0 0;
+    padding: 0.6em 0.6em 0 0.6em;
+}
+
+    .TotalCharge div.TotalChargeRate {
+        clear: both;
+        padding: 0.4em 0 0.2em 0;
+    }
+
+.TotalChargeLabel, .TotalChargeLabelRate {
+    float: left;
+    clear: both;
+}
+
+.TotalChargeValue, .TotalChargeValueRate {
+    float: right;
+    text-align: right;
+}
+
+.TotalChargeLabelRate {
+    padding: 0 0.4em 0 0;
+}
+
+.TotalCharge .ProductPriceBreackDownLink {
+    text-align: right;
+}
+
+/* Room # in for price repeater  for Multiroom */
+.RoomNmbr {
+    display: block;
+    margin: .3em 0 0;
+    padding: .3em 0 0;
+}
+
+/* Product Original Price for promotions */
+.PromoOriginalPrice {
+    display: block;
+}
+
+/* Including Tax legend */
+.ProductPriceIncTax {
+    display: block;
+    margin: .1em 0 0;
+    text-align: right;
+    clear: right;
+}
+
+.RoomPrice .ProductPriceIncTax, .ResTotalPrice .ProductPriceIncTax {
+    text-align: left;
+}
+
+.ProductPriceBreackDownLink {
+    float: right;
+    clear: right;
+    margin: 0 0 .6em;
+}
+
+/* Select Buttton Container */
+.SelectProduct {
+    float: right;
+    text-align: right;
+    clear: right;
+}
+
+
+
+/******************************************/
+/*      Avail Results Filter Control      */
+/******************************************/
+
+.FilterResults {
+    width: 20em;
+    margin: 0 1em 1em 0;
+    padding: 10px;
+    float: left;
+    clear: left;
+}
+
+.SliderContainer, .ResultsLoyaltyFilter {
+    margin: 0 0 .9em;
+    padding: 0 0 .9em;
+}
+
+.SliderTrack {
+    width: 17.4em;
+}
+
+.SliderMsgTop {
+    margin: 0 0 .3em;
+    display: block;
+    text-align: center;
+}
+
+.SliderMsgBtm {
+    margin: .3em 0 0;
+    display: block;
+    text-align: center;
+}
+
+.ResultsRoomFilter, .ResultsRateFilter, .ResultsPackageFilter {
+    margin: .9em 0 0;
+    padding: .9em 0 0;
+}
+
+.ResultsFiltersContainer div:first-child {
+    border-top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.SearchbyRateFltr {
+    margin: .6em 0 0;
+}
+
+
+
+/***************************************************/
+/*      Avail Results & Compare Common styles      */
+/***************************************************/
+
+/* Photo and more photos link container */
+.ComparePhoto, .ProductImage {
+    float: left;
+    text-align: right;
+}
+
+.ProductImage {
+    margin: 0 1em .6em 0;
+}
+
+.MorePhotosLink {
+    background-position: -12px -628px; /* sprite */
+    padding: 0 0 0 16px;
+}
+
+
+
+/***************************/
+/*      Compare Rooms      */
+/***************************/
+
+/* Summary */
+.YourStayHorz.Bg5B1 {
+    padding: 3px 10px 10px;
+}
+
+.YourStayHorz .SummaryInfoCombo {
+    float: left;
+    margin: 0 2.5em 0 0;
+}
+
+.YourStayHorz .StayLabel {
+    display: inline;
+    padding: 0 0.4em 0 0;
+}
+
+.YourStayHorz .StayValue {
+    display: inline;
+}
+
+.YourStayHorz .GuestMultiRoomCombo {
+    display: inline;
+    padding: 0 0.6em 0.3em;
+}
+
+.YourStayHorz .CouponOffer {
+    float: none;
+    padding: 1em 0 0;
+    clear: both;
+}
+
+.YourStayHorz .CouponCodeInputBtn {
+    display: inline;
+}
+
+/* Clear float of inside elements */
+.YourStayHorz .StaySummary {
+    overflow: hidden;
+}
+
+/* Return Link */
+.ReturntoResults {
+    float: right;
+    margin: 0 0 1em 0;
+}
+
+/* Page Header */
+.ComparePageTitle {
+    float: left;
+}
+
+.CompareRooms {
+    padding: 1em 0;
+}
+
+/* Adding back the border per cell */
+.CompareTable {
+    border-collapse: separate;
+}
+
+/* Each cell needs a fixed width */
+.CompareItem {
+    width: 150px;
+    padding: 0 1em;
+    vertical-align: top;
+}
+
+/* Remove the left border for the first cell in the row */
+.CompareTable tr td:first-child {
+    border-left: 0;
+}
+
+/* Room Name */
+.CompareTitle {
+    display: inline;
+    max-width: 85%;
+    float: left;
+}
+
+/* Button to remove Room from the list */
+.CompareClose {
+    float: right;
+    padding: 4px;
+    margin: 0 0 .6em 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* Image style */
+.CompareImg {
+    padding: 4px;
+    margin: 0 0 .3em;
+    display: block;
+    cursor: pointer;
+}
+
+/* Room Description */
+.CompareRoomDesc {
+    padding: .6em 0 .9em;
+}
+
+    .CompareRoomDesc span {
+        display: block;
+    }
+
+/* Rate Name and Policies Link */
+.CompareRateDesc {
+    padding: .9em 0 0;
+}
+
+.ComparePolicies {
+    padding: 0 0 .6em;
+}
+
+/* Select Room button */
+.CompareSelect {
+    clear: both;
+    margin: .6em 0 0;
+}
+
+/* Price Details table */
+.ComparePriceDetailTbl {
+    width: 100%;
+    margin-top: .9em;
+}
+
+.CPriceDetailLabel {
+    white-space: nowrap;
+    padding-right: .3em;
+}
+
+.CPriceDetailValue {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.ComPriceBreackDownLink {
+    text-align: left;
+}
+
+
+
+/*****************************/
+/*      Select Packages      */
+/*****************************/
+
+.PackageContainer {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Buttons */
+.PkgOptBtnsTop, .PckOptBtnsBtm {
+    float: right;
+}
+
+/* Instructions & Warning Messages */
+.PkgInst, .PkgWarnings {
+    display: block;
+    margin: 0 0 .6em;
+}
+
+/* Category information container */
+.PackageHeader {
+    padding: .9em;
+    margin: 0;
+}
+
+    .PackageHeader .TitleSz1 {
+        margin: 0;
+    }
+
+/* Package Item */
+.PackageItem {
+    padding: 1em 1em 1em 2em;
+}
+
+/* Package Name */
+.PackageNameHyperLink {
+    display: block;
+    margin: 0 0 .6em 0;
+}
+
+/* Images */
+.PkgImageDiv {
+    float: right;
+}
+
+.BEPkgImg {
+    display: block;
+    padding: 4px;
+    margin: 0 0 2em 2em;
+}
+
+/* Package Content */
+.PkgItemContent {
+    display: inline;
+}
+
+/* No Avail Msg */
+.PkgNoAvailMsg {
+    margin: 0 0 .3em;
+}
+
+/* Package Description & Policies */
+.PkgDesc, .PkgPoliciesDiv {
+    margin: 0 0 1em;
+}
+
+/* Label for Packages options */
+.PkgLabel {
+    display: block;
+    margin: 0 0 .3em;
+}
+
+td.PkgLabel {
+    display: table-cell;
+    padding: 0 1em .3em 0;
+    margin: 0;
+}
+
+.PkgConfirmedData .PkgLabel {
+    display: inline;
+    margin: 0;
+    padding: 0 .6em 0 0;
+}
+
+/* Date and Time */
+.PkgDateTime {
+    float: left;
+    clear: left;
+    margin: 0 2em 1.5em 0;
+    text-align: center;
+}
+
+.PkgTimeDDL {
+    margin: .9em 0 0;
+}
+
+/* Guests /Quantity */
+.PkgGuest {
+    float: left;
+    margin: 0 2em 1.2em 0;
+}
+
+.PkgGuestDpDwn {
+    padding: 0 1em .3em 0;
+}
+
+.PkgGuestPrice {
+    padding: 0 0 .3em 0;
+}
+
+.PkgPerText {
+    margin: 1.2em 0 0;
+}
+
+/* Package Select and Total Price Row */
+.PackageCheck {
+    float: left;
+    clear: left;
+    margin: 0 1em 3px 3px;
+    padding: .3em 1em .3em 26px;
+    text-indent: -18px;
+}
+
+    .PackageCheck input {
+        margin: 0 5px 0 0;
+        padding: 0;
+        vertical-align: middle;
+        width: 13px;
+        height: 13px;
+    }
+
+    .PackageCheck label {
+        vertical-align: middle;
+        padding: 0;
+        display: inline;
+    }
+
+.PkgPrice {
+    float: left;
+    margin: 2px 0 0 0;
+}
+
+    .PkgPrice .StrikeOut {
+        display: block;
+    }
+
+/* Pricing Extra Info Panel */
+.PkgExtraInfo {
+    margin: 0 0 0 1.6em;
+}
+
+    .PkgExtraInfo .StrikeOut {
+        display: block;
+    }
+
+/* Price Override Cluetip */
+.PkgCluetipTitle {
+    padding: 0 0 .3em;
+}
+
+.PkgHelpDate {
+    padding: 0 .6em .3em 0;
+}
+
+.PkgHelpOrgPrice {
+    padding: 0 .6em .3em;
+    text-align: right;
+}
+
+.PkgHelpPrice, .PkgHelpPriceBold {
+    padding: 0 0 .3em .6em;
+    text-align: right;
+}
+
+.PkgPriceHelpTtl {
+    padding: .3em .6em 0 0;
+}
+
+.PkgPriceHelpTtlPrice, .PkgPriceHelpTtlPriceSmall {
+    padding: .3em 0 0 .6em;
+    text-align: right;
+}
+
+/* Date Selection Modal */
+.PkgDateSelTitle {
+    padding: 0 0 .3em;
+}
+
+.PkgPopTbl {
+    display: table;
+    width: 100%;
+    margin: 0 0 1em;
+}
+
+.PkgPopRow {
+    display: table-row;
+}
+
+.PkgPopDate {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1em 1.2em 1em 0;
+}
+
+    .PkgPopDate .DynamicDate table {
+        margin: 0;
+    }
+
+.PkgPopPrice, .PkgPopOccPrice {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1em .6em 1em 0;
+}
+
+.PkpPopOccLabel {
+    padding: 0 .6em 0 0;
+    vertical-align: top;
+}
+
+.PkgPopPrice .StrikeOut {
+    display: block;
+}
+
+.PkgPopOccTxt .StrikeOut {
+    padding: 0 .3em 0 0;
+}
+
+.PkgPopBtn {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1em 0;
+    text-align: right;
+}
+
+
+/* Other Styles */
+.PkgTotalPriceLabel {
+    padding: 1em .4em 0 0;
+}
+
+.PkgOrigPriceLbl {
+    display: none;
+}
+
+.PkgConfirmedInfo {
+    margin: 1em 0 0;
+    padding: 1em 0 0;
+}
+
+.PkgConfirmedData {
+    margin: 1em 0 0;
+}
+
+.PkgConfirmed, .PkgPriceRecalculation {
+    margin: 0 0 .6em;
+}
+
+
+
+/***********************************/
+/*      Checkout & My Profile      */
+/***********************************/
+
+/* Registered User Login */
+/* Display Login in 1 line (alignment problem with forgot pwd link) */
+.ReguisterUserLogin .LoginID {
+    float: left;
+}
+
+/* Errors */
+.CheckoutLoginError {
+    margin: 0 0 .6em;
+}
+
+/* Forgot Passwrod Section */
+.ForgotPwdInstructions {
+    display: block;
+    margin: 0 0 .3em;
+}
+
+.ForgotPwdLink {
+    display: block;
+    clear: both;
+    padding: .3em 0 0;
+}
+
+.ForgotQuestionLink {
+    display: block;
+    clear: both;
+    padding: .6em 0 0;
+}
+
+.PasswordInput, .LoginBtn {
+    float: left;
+}
+
+/* Booker Profile checkbox */
+.BookerLoginCheck {
+    padding: 0 0 .6em 18px;
+    text-indent: -18px;
+}
+
+    .BookerLoginCheck input {
+        vertical-align: middle;
+        margin: 0 5px 0 0;
+        padding: 0;
+        width: 13px;
+        height: 13px;
+    }
+
+    .BookerLoginCheck label {
+        vertical-align: middle;
+    }
+
+
+/* Float Container next to the Summary */
+.Checkout, .CheckoutNoAvailMsg, .NoPkgMsg {
+    overflow: hidden;
+}
+
+/* Reservation X DDL for Multi Reservations */
+.CheckoutRoomSelect .TitleSz1 {
+    margin: 0;
+}
+
+/* Reset background padding */
+.CheckoutForm {
+    padding: 0;
+}
+
+/* Guest Info, Additional Details & Booker Profile Section Headers */
+.GuestInfoHeader, .AdditionalDetailsHeader, .ResAgentHeader {
+    padding: 6px 10px;
+    margin: 0;
+}
+
+    .GuestInfoHeader .TitleSz1 {
+        margin: 0;
+        display: inline-block;
+    }
+
+/* Registered User Login Link */
+.RegisteredUserLink {
+    margin: 0 0 0 1em;
+}
+
+/* New Guest Button */
+.NewGuest {
+    float: right;
+    margin: 0 0 0 1em;
+    text-align: right;
+}
+
+
+/* Subsection Containers */
+.CheckoutSubSection {
+    padding: 10px;
+}
+
+/* ToggleSection Container */
+.ToggleSection {
+    margin: .6em 0 0 0;
+}
+
+
+/* Layout in 2 Even Columns */
+.Layout2Col {
+    position: relative;
+}
+
+.Layout2ColCntrLine {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    width: 2px;
+}
+
+.Layout2ColLftCol {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+.Layout2ColRtCol {
+    float: right;
+    width: 50%;
+    position: relative;
+}
+
+.Layout2Col .LabelDdlCombo {
+    display: block;
+}
+
+
+/* Margins */
+.SavedProfile, .RequiredFields, .CreateProfile, .OptInOffers, .SaveOnProfile,
+.DefaultAddress, .CheckoutRoomSelect, .RoomRequestListBox, .RoomRequestList, .PolicyAckDiv,
+.OptInAckDiv {
+    margin: 0 0 .9em;
+}
+
+input.AddressInput1, input.AddressInput2, .PolicyDiv {
+    margin: 0 0 .3em;
+}
+
+.EditPayment, .RemovePayment {
+    margin: 0 0 0 .6em;
+    padding: 0 0 0 .6em;
+}
+
+.PaymentLinks {
+    margin: .3em 0 0;
+}
+
+.PolicyHeader {
+    margin: .6em 0 .3em;
+}
+
+.GQuestionInstruction {
+    margin: 0 0 .6em;
+}
+
+
+
+/* Checkbox and Radio Buttons */
+.CheckoutRadioBtnList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .CheckoutCheckbox, .CheckoutRadioBtn, .CheckoutRadioBtnList li {
+        display: block;
+        padding: 0 0 0 18px;
+        text-indent: -18px;
+    }
+
+.CheckoutRadioBtn {
+    margin: 0 .9em 0 0;
+}
+
+.MarketSegment .CheckoutRadioBtn, .GAddressType .CheckoutRadioBtn {
+    float: left;
+    margin: 0 .6em .3em 0;
+}
+
+.CheckoutRadioBtnList li {
+    margin: 0 0 .3em 0;
+}
+
+.CheckoutRadioBtnList li, .Horizontal {
+    display: inline !important;
+}
+
+.CreateProfile .CheckoutCheckbox, .PrivacyPolicyAck .CheckoutCheckbox, .PolicyAckDiv .CheckoutCheckbox {
+    float: left;
+}
+
+.CheckoutCheckbox input, .CheckoutRadioBtn input, .CheckoutRadioBtnList li input {
+    margin: 0 5px 0 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+}
+
+.CheckoutCheckbox label, .CheckoutRadioBtn label, .CheckoutRadioBtnList li label {
+    vertical-align: middle;
+    padding: 0;
+    display: inline;
+}
+
+/* Address Header */
+.GuestAddressDiv .TitlewIconDrk {
+    margin: 0 0 0.6em -10px;
+    float: left;
+}
+
+.NewAddress {
+    float: right;
+}
+
+/* Payment Header */
+.PaymentDiv .TitlewIconDrk {
+    display: inline-block;
+}
+
+
+/* Room Request 4 DLL */
+.RoomRequestDDLs select {
+    margin: 0 1.2em .9em 0;
+}
+
+/* Room Request 1 List */
+.RequestListInstructions {
+    margin: 0 0 .3em;
+}
+
+/* Room Request unordered list: align Checkbox with label */
+.RmReqList {
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .RmReqList li {
+        margin: 0 3em 0 0;
+        padding: 0 0 .3em 18px;
+        text-indent: -18px;
+    }
+
+        .RmReqList li input {
+            vertical-align: middle;
+            margin: 0 5px 0 0;
+            padding: 0;
+            width: 13px;
+            height: 13px;
+        }
+
+        .RmReqList li label {
+            vertical-align: middle;
+        }
+
+/* Tranport instructions */
+.TranspInst {
+    margin: 0 0 .9em;
+}
+
+/* Separate Arrival and Departure Fields Transporation */
+.ArrivalTransportation {
+    margin: 0 0 .3em;
+}
+
+.ArriveArrengementCheckbox {
+    margin: 0 0 2em;
+}
+
+/* Time and Flight/Train # doesn't need a wide field */
+.ArrivalTime input, .ArrivalAirline input, .DepartureTime input, .DepartureAirline input {
+    width: 100px;
+}
+
+
+/* Buttons */
+.CheckoutBtmBtns {
+    float: right;
+    margin: 0 0 1em;
+}
+
+
+/* My Profile Styles */
+.DataRetTxt {
+    margin: 0 0 1em;
+}
+
+.MyProfile .Layout2ColLftCol .CheckoutSubSection {
+    padding: 0 5px 0 0;
+}
+
+.MyProfile .Layout2ColRtCol .CheckoutSubSection {
+    padding: 0 0 5px;
+}
+
+.MyProfile .TitlewIconDrk, .MyProfile .TitleSz2, .MyProfile .GuestAddressDiv .TitlewIconDrk {
+    margin: 0 0 .6em;
+    display: inline-block;
+}
+
+.MyProfile .IconBg {
+    display: none;
+}
+
+.MyProfile .TxtTitle {
+    padding: 0;
+}
+
+.MyProfile .BorTp2 {
+    border: 0;
+}
+
+.MyProfile .ToggleSection {
+    margin: 0;
+}
+
+.divRoomRequestsCheckList {
+    height: 250px;
+    overflow: auto;
+}
+
+.SaveProfileBtn {
+    float: right;
+}
+
+
+
+/**********************************/
+/*      Cross Selling Hotels      */
+/**********************************/
+
+.CrossSellingHotels {
+    padding: 10px;
+}
+
+.ItinerarySavedMsg {
+    margin: 0 0 .9em;
+}
+
+.LocateHotelInstructions {
+    margin: 0 0 .6em;
+}
+
+.HotelSelection {
+    margin: 0 0 .6em;
+}
+
+.LocateHotelCheckBox {
+    padding: 0 0 0 18px;
+    text-indent: -18px;
+    display: block;
+}
+
+    .LocateHotelCheckBox input {
+        vertical-align: middle;
+        margin: 0 5px 0 0;
+        padding: 0;
+        width: 13px;
+        height: 13px;
+    }
+
+    .LocateHotelCheckBox label {
+        vertical-align: middle;
+    }
+
+.LocateByDistanceDiv {
+    margin: 1.2em 0;
+}
+
+.FindHotelsBtn {
+    float: right;
+}
+
+
+
+/**************************************/
+/*      Review / Confirm / Modify     */
+/**************************************/
+
+.AlmostThereHeader {
+    display: block;
+}
+
+.AlmostThereMsg, .NoResMsg {
+    display: block;
+    margin: 0 0 .9em;
+}
+
+.ResMsg {
+    margin: 0 0 .9em;
+}
+
+.PrintAllContainer {
+    float: right;
+    margin: .6em 0 0;
+}
+
+.ResBottomBtns {
+    text-align: right;
+    margin: 0 0 1em;
+}
+
+.MarketingMsg {
+    display: block;
+    margin: .9em 0 0;
+    padding: .9em 0;
+}
+
+.NwResLinkDiv {
+    margin: 0 0 1em;
+}
+
+
+
+/***********************************************************/
+/*      Reservation Details (Review, Confirm, Modify)      */
+/***********************************************************/
+
+.ReservationDiv {
+    padding: .6em 0 0;
+}
+
+.ResConfirmCancelNo {
+    font-weight: normal;
+}
+
+.ReservationDiv .ResStatus {
+    margin: 0 0 0 .6em;
+}
+
+.ResBtnDiv {
+    float: right;
+}
+
+.CancelledMsg, .LateModMsg, .CancelModifyPointsMsg {
+    margin: 0 0 .9em;
+}
+
+.ResImgDiv {
+    float: left;
+    clear: left;
+    padding: 0 1em 0 0;
+}
+
+.ResRoomImg, .ResAddImg {
+    padding: 4px;
+    margin: 0 0 .9em;
+    display: block;
+    cursor: pointer;
+}
+
+.ReservationDetails {
+    overflow: hidden;
+    position: relative;
+}
+
+.ResDetailLftCol {
+    float: left;
+    width: 40%;
+    position: relative;
+}
+
+.ResDetailRtCol {
+    float: left;
+    width: 60%;
+    position: relative;
+}
+
+.ResDetailCntrLine {
+    position: absolute;
+    height: 100%;
+    left: 40%;
+    width: 2px;
+    padding: 0;
+}
+
+.ReservationDetails .TitleSz2 {
+    margin: 0;
+}
+
+.ResHotelInfo, .ResDatesGuest, .ResTotalPrice, .ResBooker {
+    margin: 0 1.2em 1.2em 0;
+}
+
+.ResPaymentInfo {
+    margin: 0 1.2em .3em 0;
+}
+
+.ResGuestInfoDiv {
+    display: inline-block;
+    margin: 0 0 0 .3em;
+    height: 12px;
+}
+
+.ResMainGuest {
+    margin: 0 0 1.2em 1.4em;
+}
+
+.ResProductInfo, .ResProductExtraInfo {
+    margin: 0 0 .6em 1.4em;
+}
+
+.ResProductExtraInfo {
+    padding: .6em 0 0;
+}
+
+.ResRoom, .ResRate, .ResCredential, .ResPackage, .ResLoyalty,
+.ResPurpose, .ResRequests, .ResTransportation, .ResALoyaltyNumberDate {
+    margin: 0 0 .3em;
+}
+
+.ResComments, .ResBookerLoyalty {
+    margin: .3em 0 0;
+}
+
+.ResAgent {
+    margin: .3em 0;
+}
+
+.ResProductLabel {
+    float: left;
+}
+
+.ResProductTxt {
+    overflow: hidden;
+    padding: 0 0 0 .3em;
+}
+
+.ResPolicies {
+    margin: .3em 0 .9em;
+}
+
+.AuthorizationFailurePanel .ErrorMsg {
+    display: block;
+    margin: 0 0 .3m;
+}
+
+/* Price Details */
+
+.ResPriceDetailTbl {
+    padding: 0;
+    line-height: 1.1em;
+}
+
+.ResPriceDetailLabel {
+    padding-right: 1.2em;
+}
+
+.ResFees td {
+    padding-bottom: .4em;
+}
+
+.ResTotalRow td {
+    padding-top: .4em;
+}
+
+.ResPriceDetailValue {
+    text-align: right;
+}
+
+.ResPriceBreackDownLink {
+    padding-top: .3em;
+}
+
+
+
+/*********************************/
+/*      Search Reservations      */
+/*********************************/
+
+.ResSearch, .ResResults {
+    padding: 0;
+}
+
+.SearchErrorMsg span {
+    margin: .6em 10px;
+}
+
+.NotFoundMessage, .SearchbyConfirmNmbr, .SearchbyPwd {
+    padding: 10px;
+}
+
+    .SearchbyPwd .SearchEmail {
+        float: left;
+    }
+
+.ForgotPwdInstructions, .SearchPwdError {
+    margin: 0 0 .6em;
+}
+
+.ResRsltsItemGroup {
+    padding: 1.2em 10px 0;
+    margin: 1.2em 0 0;
+}
+
+.ResResults .ResRsltsItemGroup:first-child {
+    margin: 0;
+    border: 0;
+}
+
+.ResRsltsItemGroup h2 {
+    display: inline-block;
+}
+
+.ResConfirmNo {
+    font-weight: normal;
+}
+
+.ResRsltsItemGroup .ResStatus {
+    margin: 0 0 0 .6em;
+}
+
+.SearchRsltsBtn {
+    float: right;
+    margin: 0 0 0 .6em;
+}
+
+.ResRsltsDetails span {
+    margin: 0 2em 0 0;
+}
+
+.ResRsltsItem {
+    margin: 0 0 1.2em;
+}
+
+/* Modify Res Toolbar */
+.ModTBStatus {
+    margin: 0 .9em 0 0;
+}
+
+.ModTBConfirmNo {
+    margin: 0 2em 0 0;
+}
+
+.ModTBCluetip span {
+    display: inline;
+}
+
+.TBCombo {
+    margin: 0 0 .9em;
+}
+
+.TBLoyaltyPoints {
+    padding: 0 0 .9em;
+}
+
+.ModTBCluetip .TBLabel {
+    display: block;
+    margin: 0 0 .15em;
+}
+
+.TBCalArrival {
+    display: inline-block;
+    margin: 0 2em 0 0;
+}
+
+.TBCalDeparture {
+    display: inline-block;
+}
+
+.TBDynamicDates .WeekDay {
+    display: block;
+}
+
+.TBTotalPrice {
+    padding: .6em 0 0;
+    margin: .3em 0 0;
+}
+
+    .TBTotalPrice .TotalTxt {
+        float: right;
+    }
+
+/* Forgot Password */
+.RSForgotQuestionLink {
+    margin: .9em 0;
+    display: block;
+}
+
+.RSResetPasswordConfirmDiv .CloseBtn {
+    margin-left: 0;
+}
+
+
+
+/***************************/
+/*      Modal Windows      */
+/***************************/
+
+.ModalBody {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.LoginInstructions, .ModalLoginError, .AcceptCheck {
+    margin: 0 0 .9em;
+}
+
+.ModalLoginBtn, .ModalEnrollBtn {
+    margin: 0 0 1.2em;
+}
+
+.ModalForgotPwdBtn, .ModalCloseBtn {
+    margin: 0 1.2em 1.2em 0;
+}
+
+.ModalForgotPwdLink, .CreateProfileLink, .ModalForgotPwdQuestionLink, .AlreadyMember, .NotMember {
+    margin: 1.2em 0 0;
+    display: block;
+}
+
+/* Booker Profile checkbox */
+.ModalBookerLoginCheck {
+    padding: 0 0 1.2em 18px;
+    text-indent: -18px;
+}
+
+    .ModalBookerLoginCheck input {
+        vertical-align: middle;
+        margin: 0 5px 0 0;
+        padding: 0;
+        width: 13px;
+        height: 13px;
+    }
+
+    .ModalBookerLoginCheck label {
+        vertical-align: middle;
+    }
+
+.ModalImg {
+    float: right;
+    padding: 4px;
+    display: block;
+    margin: 0 0 1.2em 1.2em;
+    width: 150px;
+}
+
+.ModalRoomDesc {
+    display: block;
+    margin: 0 0 .3em;
+}
+
+.PDtlInfoRoom, .PDtlInfoRate, .PDtlInfoCoupon, .PDtlInfoPkgName {
+    margin: 0 3em .9em 0;
+    float: left;
+}
+
+.PDtlInfoRoomLabel, .PDtlInfoRateLabel, .PDtlInfoCouponLabel, .PDtlInfoPkgNameLabel {
+    padding: 0 .3em 0 0;
+}
+
+.PDtlTTLabel {
+    text-align: right;
+    padding: 0 .6em 0 0;
+}
+
+/*Price Breakdown*/
+.Centered {
+    display: block;
+    text-align: center;
+}
+
+/* Packages label*/
+.PackagesLabel {
+    color: #494949;
+    font-weight: bold;
+}
+
+/* Privacy Policy before register new user */
+.PolicyModalTxt {
+    margin: 0 0 1em;
+    max-height: 260px;
+    overflow: auto;
+}
+
+.PolicyModalCheckbox {
+    display: block;
+    padding: 0 0 0 18px;
+    text-indent: -18px;
+    margin: 0 0 .6em;
+}
+
+    .PolicyModalCheckbox input {
+        margin: 0 5px 0 0;
+        padding: 0;
+        vertical-align: middle;
+        width: 13px;
+        height: 13px;
+    }
+
+    .PolicyModalCheckbox label {
+        vertical-align: middle;
+        padding: 0;
+        display: inline;
+    }
+
+.AcceptPolicyMsg {
+    margin: 0 0 .6em;
+}
+
+.AcceptPolicyBtn {
+    margin-left: 0;
+}
+
+
+
+/******************************************/
+/*      Product Monthly Availability      */
+/******************************************/
+
+.ModalBody .CheckAvail {
+    padding: 0 1em 0 0;
+    width: auto !important;
+    min-width: inherit !important;
+    max-width: inherit !important;
+}
+
+/* Selected product */
+.ProductAvailSelected {
+    margin: 0 0 1.2em;
+    padding: 0 0 1.2em;
+}
+
+/* Room & Rate Name */
+.ProductAvailLft {
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+.ProductAvailRoom {
+    margin: 0;
+}
+
+/* Price and Select Button*/
+.ProductAvailRt {
+    float: right;
+    text-align: right;
+}
+
+.SelectedProductPrice {
+    margin: 0 0 .6em;
+}
+
+/* Header to show/hide the criteria */
+.MonthlyAvailCriteriaHeader {
+    margin: 0 0 .3em;
+}
+
+/* Reset nights dropdown margin */
+.ModalBody .HorizCal .LabelDdlCombo.Nights {
+    padding: 0 1.2em .9em 0;
+}
+
+/* Criteria Button */
+.MonthlyAvailRefreshCal {
+    float: right;
+}
+
+/* Remvoe calendar background */
+.ModalBody .CalendarDiv.Bg5B1 {
+    margin: 1.2em 0 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
+
+/* Increase font size */
+.ModalBody .CalwPrice .ui-datepicker td span.DayPrice {
+    font-size: 1.2em;
+}
+
+/**************************************/
+/*      ROOM UPSELL                   */
+/**************************************/
+
+.UpsellConfirmation {
+    padding: 0;
+}
+
+.RoomUpsellProductContainer {
+    padding: 1em;
+}
+
+.UpsellProductInfoContainer {
+    margin: 0 0 .6em;
+    overflow: hidden;
+}
+
+.UpsellProductInfo {
+    display: inline;
+}
+
+    .UpsellProductInfo li {
+        list-style: inside;
+        margin: 0 0 .6em;
+    }
+
+.UpsellProductDescription {
+    width: 60%;
+}
+
+    .UpsellProductDescription span {
+        display: block;
+        margin: 0 0 .6em;
+    }
+
+.UpsellProductName .TitleSz2, .UpsellProductNamePromo .TitleSz2 {
+    margin: .4em 0;
+}
+
+.RoomUpsellSummary {
+    float: left;
+    margin: 1em 0 1em 1em;
+    padding: 0 2em 0 0;
+}
+
+    .RoomUpsellSummary .YourStay {
+        border: 0;
+        margin: 0 0 1em;
+        padding: 1em;
+    }
+
+.RoomUpsellDetailBtn {
+    margin: 0;
+    display: block;
+}
+
+.RoomUpsellDetails {
+    margin: 0 1em 1em 0;
+    padding: 8px 10px;
+}
+
+.RoomUpsellContainer {
+    overflow: hidden;
+    padding: 2em 1em 0 2em;
+}
+
+.RoomUpsellHdr {
+    float: left;
+}
+
+.UpsellNoThxBtn {
+    float: right;
+    margin: 0 0 1em 0;
+}
+
+.UpsellOfferHeader {
+    margin: 0;
+    padding: 0.9em;
+}
+
+.ConfirmationTextLabel {
+    display: block;
+}
+
+.UpsellConfirmNo {
+    padding: 1em;
+}
+
+.UpgradeNow {
+    clear: right;
+    float: right;
+    text-align: right;
+}
+
+.OffsetProductCost {
+    float: right;
+    text-align: left;
+    margin: .4em 0 .6em .6em;
+}
+
+.OffsetPrice {
+    line-height: 1;
+    margin: 0 .1em 0 0;
+}
+
+.OffsetCostText {
+    display: block;
+}
+
+.UpsellProductPriceGroup {
+    float: right;
+    clear: right;
+}
+
+.UpsellProductPriceDiv {
+    text-align: right;
+    float: right;
+}
+
+.ProductOriginalPrice {
+    display: block;
+}
+
+.UpsellProductPriceDiv span:first-child {
+    border-top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.UpsellProductPriceBreackDownLink {
+    float: right;
+    clear: right;
+    margin: 0 0 .6em;
+}
+
+.UpsellMsg {
+    display: block;
+    margin: .5em 0 0 0;
+    padding: 0;
+}
+
+.UpgradeAvailBtn {
+    margin: 0 0 .6em 0;
+}
+
+
+
+/***************************************/
+/*      Avail Results OTA Compare      */
+/***************************************/
+
+/* Lowest Price Compare */
+
+.rgtAlign, .btmAlign {
+    display: none;
+}
+
+.LPCompare {
+    display: inline-block;
+    position: fixed;
+    z-index: 4999;
+}
+
+    .LPCompare.rgtAlign {
+        top: 20%;
+        right: 0;
+    }
+
+    .LPCompare.btmAlign {
+        right: 20%;
+        bottom: 0;
+    }
+
+    .LPCompare .LPCompareHeader {
+        margin: 0;
+        padding: 1em 1.2em;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .LPCompare.rgtAlign .LPToggleBtn {
+        height: 100%;
+        left: -41px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 40px;
+        text-align: center;
+    }
+
+        .LPCompare.rgtAlign .LPToggleBtn span {
+            display: block;
+            font-size: 20px;
+            line-height: 1;
+            height: 16px;
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+    .LPCompare.btmAlign .LPToggleBtn {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        padding: 0;
+    }
+
+        .LPCompare.btmAlign .LPToggleBtn span {
+            display: block;
+            font-size: 20px;
+            line-height: 1;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+    .LPCompare.open .LPToggleBtn span.closed {
+        display: none;
+    }
+
+    .LPCompare.open .LPToggleBtn span.open {
+        display: block;
+    }
+
+    .LPCompare.closed .LPToggleBtn span.open {
+        display: none;
+    }
+
+    .LPCompare.closed .LPToggleBtn span.closed {
+        display: block;
+    }
+
+    .LPCompare .LPCompareList {
+        margin: 0;
+        padding: 0;
+    }
+
+.LPCompareOurPrice {
+    padding: .9em 1.2em;
+    overflow: hidden;
+}
+
+.LPCompareOTA {
+    padding: .3em 1.2em;
+    overflow: hidden;
+}
+
+    .LPCompareOTA:last-child {
+        padding-bottom: 1.1em;
+    }
+
+.LPCompareLabel {
+    padding: 0 30px 0 0;
+    float: left;
+    clear: left;
+}
+
+.LPCompareValue {
+    float: right;
+    clear: right;
+    text-align: right;
+}
+
+/* Product Compare */
+
+.PPCompare {
+    float: right;
+    clear: right;
+    margin: 1em 0 0;
+}
+
+.PPCompareBtn {
+    float: right;
+    clear: right;
+}
+
+.PPCompare.open .PPCompareBtn::before {
+    display: inline-block;
+    content: "❮";
+    margin: 0 10px 0 0;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.PPCompare.closed .PPCompareBtn::before {
+    display: inline-block;
+    content: "❯";
+    margin: 0 10px 0 0;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.PPCompare .PPCompareList {
+    clear: both;
+    margin: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.PPCompare.open .PPCompareList {
+    max-height: 250px;
+    opacity: 1;
+}
+
+.PPCompare.closed .PPCompareList {
+    max-height: 0;
+    opacity: 0;
+}
+
+
+.PPCompareOurPrice {
+    padding: .6em 0;
+    margin: 0 0 .6em;
+    overflow: hidden;
+}
+
+.PPCompareOTA {
+    padding: .3em 0;
+    overflow: hidden;
+}
+
+.PPCompareLabel {
+    padding: 0 2em 0 0;
+    float: left;
+    clear: left;
+}
+
+.PPCompareValue {
+    float: right;
+    clear: right;
+    text-align: right;
+}

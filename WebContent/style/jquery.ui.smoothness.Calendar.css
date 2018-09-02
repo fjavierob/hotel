@@ -1,0 +1,42 @@
+﻿/* ThemeRoller override style sheet for jQuery Calendars Picker v1.1.1. */
+.ui-datepicker-prompt {	height: 1.5em; padding-top: 0.25em; text-align: center; }
+button.ui-datepicker-cmd { height: 2em; }
+
+.ui-datepicker-cmd-clear { display: none; }
+.ui-datepicker-cmd-close { display: none; }
+.ui-datepicker-cmd-prev { float: left; width: 30%; }
+.ui-datepicker-cmd-next { float: right; width: 30%; text-align: right;  }
+.ui-datepicker-cmd-prev span, .ui-datepicker-cmd-next span { display: block; }
+.ui-datepicker-cmd-next span { float: right; }
+.ui-datepicker-cmd-current, .ui-datepicker-cmd-today { float: left; width: 40%;	text-align: center; }
+.ui-datepicker-month-nav { float: left;	text-align: center; }
+.ui-datepicker-month-nav div { float: left; width: 12.5%; margin: 1%; padding: 1%; }
+.ui-datepicker-month-nav span {	color: #888; }
+
+.ui-datepicker-group .ui-datepicker-header { text-align: center; }
+
+
+.ui-datepicker-status { padding: 0.25em 0em; text-align: center; }
+.ui-datepicker .ui-helper-clearfix { clear: both; }
+.ui-datepicker-rtl {direction: rtl;}
+.ui-datepicker-cover { display: none; display: block; position: absolute; z-index: -1; filter: mask(); top: -4px; left: -4px; width: 200px; height: 200px; }
+
+.hasCalendarsPicker .ui-widget-content { background:transparent; border:0; }
+
+.ui-datepicker-row-break .ui-widget-header { border: 1px solid #999; background: #999 url(images/ui-bg_highlight-soft_75_999999_1x100.png) 50% 50% repeat-x; }
+
+.ui-datepicker td .ui-datepicker-other-month { display:none; }	
+	
+/* Popup Calendar */
+.calendars-popup { z-index:4800; }
+
+.calendars-popup .ui-datepicker { width: 16em !important; }
+
+.calendars-popup .ui-widget-content { padding:3px; }
+
+.calendars-popup .ui-datepicker table { margin: 0 0 3px; }
+
+.calendars-popup .ui-datepicker-calendar .ui-state-default { border: 1px solid #BBBBBB !important; background:transparent; }
+
+.calendars-popup .ui-datepicker-calendar .ui-state-active { border: 1px solid #BBBBBB !important; background:#4A4D4A; padding:3px 0; }
+

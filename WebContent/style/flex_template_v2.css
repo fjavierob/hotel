@@ -1,0 +1,798 @@
+/* Flex Template CSS v.1 */
+
+/**************************/
+/*      SPRITE IMAGE      */
+/**************************/
+
+.IconBg, .ToggleArrowDiv_On, .ToggleArrowDiv_Off, .TitlewBkgDrk, .TitlewBkgLight, a.FilterLinkInActive, a.FilterLinkActive,
+.WarningMsg, .ErrorMsg, .ErrorAttn, .reqAsterisk, .ButtonSt1, .ButtonSt2, .ButtonSt3, .ButtonSt4, .ButtonSt4Disabled,
+.VerticalScroll .thumb, .VerticalScroll .thumb .end, .HorizontalScroll .thumb, .HorizontalScroll .thumb .end, .DDListCurrent, .LangDiv,
+.BEBreadcrumb li, .BEStep1On, .BEStep2On, .BEStep3On, .BEStep4On, .BEStep5On, .BEStep6On, .activeLink, .nonactiveLink,
+.ModifyLink, .RemoveLink, .RemovePkgLink, .CluetipLink, .CluetipLinkNoTxt, .MorePhotosLink, .PriceInfoLink, .ProductNamePromo .PromoIcon,
+.ClueTipCloseImg
+    { background-image:url(/chain/507/images/shell/sprite.png); }
+    
+    /* Background positions are on a separate file in the extra CSS folder as it shouldn't be necessary to change it unless the size or location on the sprite image is changed */
+    
+
+
+/******************/
+/*      TEXT      */
+/******************/
+
+/* Default Style */
+body { font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#47413A; }
+
+/* Secondary Color (Lighter than Default) */
+.TxtLt, .TxtLtBold, .TxtSmlLt, .TxtSmlLtBold
+    { color:#716c5e; }
+    
+/* Hotel Name  */
+.HotelName { text-transform:uppercase; font-size:14px; font-weight:normal; }
+    
+/* Links Same color as Default Text */
+a.TxTColor { color:#47413A; text-decoration:none; }
+
+.MorePhotosLink { font-size:12px; color:#47413A; }
+    
+/* Labels with same color as headers */
+.TxtClrBold, .ModTBConfirmNo { color:#716c5e; font-weight:normal; text-transform:uppercase; }
+
+/* Headers */
+.TitleSz1, .TitleSz2, .TitlewIconDrk, .TitlewIconLgt, .TitlewIconToggleDrk, .TitlewIconToggleLgt,
+.TitlewBkgDrk, .TitlewBkgLight, .TitlewIconCircleArrow, .TitlewIconArrow, .RoomTotalLbl, .CheckoutSubSection 
+.SubTitlewArrow, .CluetipTitle .PackageCategory, .ModTBStatus, .ItinTotalLbl, .ConfirmationDiv .TitlewBkgDrk.TitleSz1   
+    { color:#986a02; text-transform:uppercase; font-size:18px; font-weight:normal; }
+    
+.TitlewIconToggleDrk, .TitlewIconToggleLgt, .FilterResults .TitleSz1, .HeaderTitle, .ProductName .TitleSz2, .ProductNamePromo .TitleSz2, .PkgItemTitle .TxtTitle, .RoomDdl .TitleSz1,
+.HotelList .TitleSz1
+    { color:#47413A; }
+    
+ .ModTBStatus 
+    { font-size:14px; }    
+    
+.HeaderTitle
+    { text-transform:none; }   
+
+.ProductName .TitleSz2, .ProductNamePromo .TitleSz2, .CompareRateDesc, .PriceInfoLink, .PkgItemTitle
+    { font-family:Arial,Helvetica,sans-serif; font-size:16px; text-transform:none; } 
+    
+.CompareRateDesc      
+    { color:#716c5e; font-weight:normal; }
+    
+.AvailResultsTitle, .ComparePageTitle, .PackageTitle, .CheckoutTitle, .ResReview .TitleSz1, .ResConfirm .TitleSz1  
+    { color:#47413a; font-size:30px; text-transform:none; padding:18px 0 0; } 
+    
+.CluetipTitle .PackageCategory 
+    { font-size:14px; }   
+    
+.CompareTitle, .PackageHeader .TitleSz1, .PkgHeaderDesc, .GuestInfoHeader .TitleSz1, .ReservationDiv .TitleSz2, .ResConfirmCancelNo
+    { color:#FFF; }    
+	
+/* Headers with dark background */    
+.TitlewIconDrk .IconBg, .TitlewBkgDrk.TitleSz1, .TitlewBkgDrk.TitleSz2  { color:#FFF; }	    
+
+/* SubHeads */
+.SubTitle, .SubTitlewArrow, a.FilterLinkInActive, a.FilterLinkInActive:hover, a.FilterLinkActive, a.FilterLinkActive:hover
+    { color:#716c5e; text-transform:uppercase; }
+        
+/* Warning Messages */
+.WarningMsg { color:#716c5e; }
+
+/* Error Messages */
+.ErrorMsg, .ErrorAttn { color:#B21010; }
+
+/* Required Asterix */
+.reqAsterisk { color:#986a02; }  
+
+
+
+/*************************/
+/*      FORM STYLES      */
+/*************************/
+
+input[type="text"], input[type="password"], textarea, select { border:1px solid #deddd9; font-size:11px; font-family:Arial,Helvetica,sans-serif; }
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus { border:1px solid #986A02; background:#F7EFDE; }
+
+
+
+/*************************/
+/*      BACKGROUNDS      */
+/*************************/
+
+/* Backgroungs with No Borders */
+.BgNB1, .popupBody, .ProductsInCategory, .PackageList { background:#ffffff; }
+
+.BgNB2 { background:#f3f3f1; }
+
+.BgNB3 { background:#FFFFFF; }
+
+.BgNB4 { background:#8d897e; color:#FFF; }
+
+.BgNB5 { background:#deddd9; }
+
+.SubDDList li:hover { background:transparent; }
+
+
+/* Background with Thin Border */
+.Bg1B1, .ui-widget-content { background:#ffffff; border:1px solid #e9e8e5; }
+
+.Bg1B2 { background:#f3f3f1; border:1px solid #e9e8e5; }
+
+.Bg1B3 { background:#f3f3f1; border:1px solid #deddd9; }
+
+.Bg1B4 { background:#e9e8e5; border:1px solid #deddd9; }
+
+.Bg1B5 { background:#7a756f; border:1px solid #86817a; }
+
+
+/* Background with Thick Border */
+.Bg5B1 { background:#ffffff; border:none; }
+
+.Bg5B2 { background:#f3f3f1; border:none; }
+
+.Bg5B3 { background:#F5F5F5; border:none; }
+
+.Bg5B4 { background:#f3f3f1; border:none; }
+
+/* Gradient Background */
+.HotelDiv, .DatesDiv, .QuantitiesDiv, .CodesDiv, .FiltersDiv, .YourStay, .FilterResults, .YourStayHorz, .StayCheckout, .AvailResults .ModifyToolbar, .AvailPackages .ModifyToolbar
+     { background:#f0efed; /* Old browsers */
+       background:-moz-linear-gradient(left, #f0efed 0%, #f5f5f3 100%); /* FF3.6+ */
+       background:-webkit-gradient(linear, left top, right top, color-stop(0%,#f0efed), color-stop(100%,#f5f5f3)); /* Chrome,Safari4+ */
+       background:-webkit-linear-gradient(left, #f0efed 0%,#f5f5f3 100%); /* Chrome10+,Safari5.1+ */
+       background:-o-linear-gradient(left, #f0efed 0%,#f5f5f3 100%); /* Opera 11.10+ */
+       background:-ms-linear-gradient(left, #f0efed 0%,#f5f5f3 100%); /* IE10+ */
+       background:linear-gradient(left, #f0efed 0%,#f5f5f3 100%); /* W3C */
+       filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0efed', endColorstr='#f5f5f3',GradientType=1 ); /* IE6-9 */ 
+       border:none; }      
+    
+    
+    
+/*********************/
+/*      BORDERS      */
+/*********************/
+
+/* Colors */
+.BorTp1, .BorRt1, .BorBtm1, .BorLft1, .Bor2Tp1, .Bor2Lft1, .Bor2Btm1 { border-color:#e9e8e5; }
+.BorTp2, .BorRt2, .BorBtm2, .BorLft2, .Bor2Tp2, .Bor2Lft2, .Bor2Btm2 { border-color:#D6D5CF; }
+.BorTp3, .BorRt3, .BorBtm3, .BorLft3, .Bor2Tp3, .Bor2Lft3, .Bor2Btm3 { border-color:#716c5e; }
+
+
+
+/**********************************/
+/*      JQuery UI Components      */
+/**********************************/
+
+    /* Popup Calendar Background / Price Slider:Bar border and -Not Selected:border and background  */
+    .ui-widget-content 
+        { border:1px solid #86817a; background:#FFF; }
+
+    /* Calendar "Availability" Header / Popup "Arribal" & Departure Header / Price Slider:Bar background */    
+    .ui-widget-header 
+        { border:0; background:#8d897e; color:#FFFFFF; text-transform:uppercase; font-size:18px; font-weight:normal; }
+        .ui-widget-header a 
+            { color:#FFFFFF; }
+            
+    /* Calendar Month Header / Price Slider Selectors */
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-datepicker-row-break .ui-widget-header 
+        { border:0; background:#f4f5f0; color:#2f2f2d; }
+        .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited 
+            { color:#2f2f2d; }
+        
+    /* Price Slider Selectors on Hover */
+    .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus 
+        { border:0; background:#dedede; color:#2f2f2d; }
+        .ui-state-hover a, .ui-state-hover a:hover 
+            { color:#2f2f2d; }
+        
+    /* Price Slider Active Selectors */
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active 
+        { border:0; background:#afab9f; color:#FFFFFF; }
+        .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited 
+            { color:#FFFFFF; }
+        
+        
+    /* Border Radius */
+    .ui-corner-tl{-moz-border-radius-topleft:0;-webkit-border-top-left-radius:0;border-top-left-radius:0;}
+    .ui-corner-tr{-moz-border-radius-topright:0;-webkit-border-top-right-radius:0;border-top-right-radius:0;}
+    .ui-corner-bl{-moz-border-radius-bottomleft:0;-webkit-border-bottom-left-radius:0;border-bottom-left-radius:0;}
+    .ui-corner-br{-moz-border-radius-bottomright:0;-webkit-border-bottom-right-radius:0;border-bottom-right-radius:0;}
+    .ui-corner-top{-moz-border-radius-topleft:0;-webkit-border-top-left-radius:0;border-top-left-radius:0;-moz-border-radius-topright:0;-webkit-border-top-right-radius:0;border-top-right-radius:0;}
+    .ui-corner-bottom{-moz-border-radius-bottomleft:0;-webkit-border-bottom-left-radius:0;border-bottom-left-radius:0;-moz-border-radius-bottomright:0;-webkit-border-bottom-right-radius:0;border-bottom-right-radius:0;}
+    .ui-corner-right{-moz-border-radius-topright:0;-webkit-border-top-right-radius:0;border-top-right-radius:0;-moz-border-radius-bottomright:0;-webkit-border-bottom-right-radius:0;border-bottom-right-radius:0;}
+    .ui-corner-left{-moz-border-radius-topleft:0;-webkit-border-top-left-radius:0;border-top-left-radius:0;-moz-border-radius-bottomleft:0;-webkit-border-bottom-left-radius:0;border-bottom-left-radius:0;}
+    .ui-corner-all{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;}        
+
+
+
+
+/**********************************/
+/*      CALENDAR COLOR CODES      */
+/**********************************/
+
+/* Open Dates */
+.ui-state-default.BECalOpen, .BECalOpen { background:#c8c6c4; }
+    .ui-state-default.BECalOpen span { color:#FFF; }
+
+/* No Available */
+.ui-state-default.BENoAvail, .BENoAvail { background:#47413A; }
+    .ui-state-default.BENoAvail span { color:#FFF; }
+
+/* Min Stay */
+.ui-state-default.BEMinLen, .BEMinLen { background:#716c5e; }
+    .ui-state-default.BEMinLen span { color:#FFF; }
+
+/* No Arrival */
+.ui-state-default.BENoArrive, .BENoArrive { background:#716c5e; }
+    .ui-state-default.BENoArrive span { color:#FFF; }
+            	
+/* Popup Calendar Dates */
+.calendars-popup .ui-datepicker-calendar .ui-state-default 
+    { border:0 !important; background:#C8C6C4; color:#FFF !important; }
+            	
+/* Popup Calendar Selected Date */
+.calendars-popup .ui-datepicker-calendar .ui-state-active 
+    { border:0 !important; background:#986A02; color:#FFF !important; }
+
+/* Selected dates */
+.ui-datepicker-calendar .ui-state-active, .SelectedDates { border:3px solid #986a02; } 
+
+
+
+/*********************/
+/*      BUTTONS      */
+/*********************/
+
+/* Main Button. i.e:advance to the next step */
+.ButtonSt1 {
+	font-size:21px;
+	color:#ffffff;
+	text-transform:lowercase;
+	padding:1px 17px;
+	height:auto;
+	background:#c39022 url(/chain/507/images/shell/obtn_bg.gif) repeat-x left center;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border:0;
+	letter-spacing:-0.05em;
+	line-height:1.4em;
+}
+
+
+/* Secondary Button. i.e:go back to previous step */
+.ButtonSt2, .PkgTopNoThxBtn, .PkgBtmNoThxBtn, .ReviewBtn { 
+	font-size:21px;
+	color:#ffffff;
+	text-transform:lowercase;
+	font-weight:normal;
+	padding:1px 17px;
+	height:auto;
+	background:#8d897e url(/chain/507/images/shell/lgbtn_bg.gif) repeat-x left center;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border:0;
+	letter-spacing:-0.05em;
+	line-height:1.4em;
+}
+
+
+/* Small button, this is used to perform secondary action between the page, like edit dates, compare rooms */
+.ButtonSt4, .ui-dialog .ui-dialog-buttonpane button, .ui-dialog .ui-dialog-buttonpane button.ui-state-hover { 
+	font-size:14px;
+	color:#ffffff;
+	text-transform:uppercase;
+	font-weight:normal;
+	padding:0 16px;
+	height:30px;
+	background:#716c5e url(/chain/507/images/shell/dgbtn_bg.gif) repeat-x left center;
+	border-radius:0px;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border:0;
+}
+
+a.LinkButtonSt4, a.LinkButtonSt4:hover { 
+	padding:7px 16px 6px;
+	height:auto;
+	color:#FFF;
+	text-decoration:none;
+	display:inline-block;
+}
+/* Shadow for all buttons */
+.ButtonSt1, .ButtonSt2, .ButtonSt4
+    { -webkit-box-shadow:0 0 0 0 #D6D5CF; -moz-box-shadow:0 0 0 0 #D6D5CF; box-shadow:0 0 0 0 #D6D5CF; margin:0; font-weight:normal; }
+    
+    
+    
+/**************************************/
+/*      SCROLLBAR (COMPARE PAGE)      */
+/**************************************/
+
+.VerticalScroll .scrollbar, .HorizontalScroll .scrollbar
+    { background:#f6f5f5; border:0; }
+    .HorizontalScroll .scrollbar
+        { height:10px; }
+    .VerticalScroll .scrollbar
+        { width:10px; }
+
+.VerticalScroll .thumb, .HorizontalScroll .thumb
+    { background-color:#75736d; border:1px solid #FFF; -webkit-box-shadow:2px 2px 2px 0px rgba(0, 0, 0, .25); -moz-box-shadow:2px 2px 2px 0px rgba(0, 0, 0, .25); box-shadow:2px 2px 2px 0px rgba(0, 0, 0, .25); }
+    .HorizontalScroll .thumb
+        { height:15px; background-position:right -680px; top:-3px; }
+    .VerticalScroll .thumb
+        { width:15px; left:-3px; }
+
+.VerticalScroll .thumb .end, .HorizontalScroll .thumb .end
+    { background-color:transparent; }
+    .HorizontalScroll .thumb .end   
+        { height:15px; background-position:-12px -680px; }
+    .VerticalScroll .thumb .end   
+        { width:15px; }
+    
+    
+/************************/
+/*      BREADCRUMB      */
+/************************/
+
+/* Container */
+.BEBreadcrumb { font-size:14px; text-transform:uppercase; border-width:0; padding:0; }
+
+/* Background */
+.BEBreadcrumb ul { background:transparent; height:31px; }
+
+.BEBreadcrumb li { width:200px; height:31px; padding:0; margin:0 0 0 -15px; }
+li.Step1 { margin:0; }
+li.Step5 { display:none; }
+
+.BEBreadcrumb li div { padding:0; text-align:center; height:31px; }
+
+.BEBreadOn, .BEBreadBk, .BEBreadFwd 
+{ -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; font-weight:normal; margin:0; padding:7px 0 9px; top:0; }
+
+/* Current Step */
+.BEBreadOn { background:url(/chain/507/images/shell/breadcrumb_on.png) no-repeat right top; color:#FFF; }
+.Step1 .BEBreadOn { background:url(/chain/507/images/shell/breadcrumb_onf.png) no-repeat right top; }
+.Step6 .BEBreadOn { background:url(/chain/507/images/shell/breadcrumb_onl.png) no-repeat right top; }
+
+/* Previous Step */
+.BEBreadBk { background:url(/chain/507/images/shell/breadcrumb_done.png) no-repeat right top; color:#FFF; }
+.Step1 .BEBreadBk { background:url(/chain/507/images/shell/breadcrumb_donef.png) no-repeat right top; }
+.Step6 .BEBreadBk { background:url(/chain/507/images/shell/breadcrumb_donel.png) no-repeat right top; }
+
+/* Following Step */
+.BEBreadFwd { background:url(/chain/507/images/shell/breadcrumb_off.png) no-repeat right top; color:#362f2d; }
+.Step1 .BEBreadFwd { background:url(/chain/507/images/shell/breadcrumb_offf.png) no-repeat right top; }
+.Step6 .BEBreadFwd { background:url(/chain/507/images/shell/breadcrumb_offl.png) no-repeat right top; }
+
+li.Step6 .BEBreadFwd { background-position:left top; }
+
+
+
+/********************/
+/*      SHADOW      */
+/********************/
+
+/* Right and Bottom Shadow */
+.wShadow1 { -webkit-box-shadow:0 0 0 0 #999; -moz-box-shadow:0 0 0 0 #999; box-shadow:0 0 0 0 #999; }
+
+/* Shadow on all sides */
+.wShadow2 { -webkit-box-shadow:0 0 0 0 #999; -moz-box-shadow:0 0 0 0 #999; box-shadow:0 0 0 0 #999; }  
+    
+/* You Stay "Calendar" dates */
+.DateDiv { -webkit-box-shadow:0 0 0 0 #999999; -moz-box-shadow:0 0 0 0 #999999; box-shadow:0 0 0 0 #999999; } 
+
+
+/*****************************/
+/*      SPECIAL CHANGES      */
+/*****************************/
+
+/* Headers */
+.TitlewIconDrk, .TitlewIconLgt, .TitlewIconToggleDrk, .TitlewIconToggleLgt, .TitlewBkgDrk, .TitlewBkgLight, .TitleSz1, .TitleSz2,
+.ProductName .TitleSz2, .ProductNamePromo .TitleSz2, .GuestAddressDiv .TitlewIconDrk { margin:0 0 6px; }
+.PkgItemTitle { margin:0 0 14px; }
+.IconBg, .TitlewIconCircleArrow .ToggleArrowDiv_On, .TitlewIconCircleArrow .ToggleArrowDiv_Off,
+.SubTitlewArrow .ToggleArrowDiv_Off, .SubTitlewArrow .ToggleArrowDiv_On,
+.TitlewIconArrow .ToggleArrowDiv_On, .TitlewIconArrow .ToggleArrowDiv_Off { display:none; }
+.TitlewIconDrk .TxtTitle, .TitlewIconLgt .TxtTitle, .TitlewIconToggleDrk .TxtTitle, .TitlewIconToggleLgt .TxtTitle, .TitlewBkgDrk, .TitlewBkgLight { padding:0; }
+.TitlewIconToggleDrk .ToggleArrowDiv_Off, .TitlewIconToggleDrk .ToggleArrowDiv_On, 
+.TitlewIconToggleLgt .ToggleArrowDiv_Off, .TitlewIconToggleLgt .ToggleArrowDiv_On { float:right; margin:0; padding:0 0 0 5px; width:12px; }
+.SubTitlewArrow { padding:0; }
+
+
+/* Reset Container Padding */
+.BgNB1, .BgNB2, .BgNB3, .BgNB4, .Bg1B1, .Bg1B2, .Bg1B3, .Bg1B4, .Bg5B1, .Bg5B2, .Bg5B3, .Bg5B4, .YourStayHorz.Bg5B1 { padding:10px 14px; margin:0 0 10px; }
+
+/* Reserve Space for view itinerary link */
+.TopBar { height:20px; }
+.ShopCartLinkDiv { padding:0 0 3px; margin:0; }
+.ShopCartLink { font-size:13px; padding:0; text-decoration:none; text-transform:uppercase; }
+
+/* Style Language DDl and Login as Global nav */
+.LangDiv .DDListCurrent, .LangDiv a, .LoginDiv a, .WellcomeDiv a, .WellcomeDiv {color:#d6d5cf; font-size:13px; text-decoration:none; }
+.LangDiv .DDListCurrent:hover, .LangDiv a:hover, .LoginDiv a:hover, .WellcomeDiv a:hover, .WellcomeDiv .DDListCurrent:hover { color:#c39122; }
+.LangDdl .DDListCurrent { display:block; padding:6px 0 6px 15px; height:18px; }
+.WellcomeDiv .DDListCurrent { display:block; padding:6px 25px 6px 15px; height:18px; }
+.LoginLink { padding:0; }
+.LoginLink a { display:block; padding:6px 15px; height:18px; }
+.LangDiv:hover, .LangDdl .DDListCurrent:hover, .WellcomeDiv:hover, .WellcomeDiv .DDListCurrent:hover { background-color:#1d1915; }
+
+.LangDiv ul.SubDDList, .WellcomeDiv ul.SubDDList { background:url(/chain/507/images/shell/global-dd-bg.png) 0 0; padding:12px 14px 10px; width:142px; border:0; }
+.LangDiv ul.SubDDList li, .WellcomeDiv ul.SubDDList li { padding:0; margin:0 0 8px; text-transform:none; border:0; }
+.LangDiv ul.SubDDList li { overflow:hidden; white-space:nowrap;}
+.LangDiv, .DDListCurrent { background-position:right -452px; }
+.LangDiv .DDListCurrent { background-image:none; overflow:hidden; white-space:nowrap; }
+
+.LangImg, .SubDDList .LangImg { display:none; }
+
+
+/* Move Language DDL to Global Nav */
+.LangDiv { position:absolute; text-transform:uppercase; display:block; float:right; margin:0; padding:0 25px 0 0; height:30px; font-size:13px; top:-150px; }
+
+/* Move & Welcome Login DDL to Global Nav */
+.LoginDiv, .WellcomeDiv  { position:absolute; text-transform:uppercase; display:block; float:right; margin:0; padding:0; font-size:13px; top:-150px; }
+
+/* Hide Currency DDL per step */
+.CheckAvail .CurrencyDiv, .CustInfo .CurrencyDiv { display:none; }
+
+.LinksBar { padding:0; }
+.LinksBar div { border:0; }
+
+
+/* Hotel Name */
+.HotelNameAddress { left:268px; top:63px; padding:0; position:absolute; }
+.CheckAvail .HotelNameAddress { display:none; }
+
+/* Currency DDL & Multiroom DDL */
+.DDListCurrent { background-image: none; }
+.CurrencyDiv { position:absolute; color:#47413A; z-index:51; top:72px; }
+.CurrencyDiv .DDListCurrent { /*background-position:; text-overflow:ellipsis;*/ white-space:nowrap; overflow:hidden; width:31px; padding-right: 0; }
+.CurrencyDiv .CurrConvInfo { white-space:normal; }
+.CurrencyDiv .DDList { margin:0; padding:0 10px; }
+.CurCode { background:transparent; color:#47413A; margin:0; padding:0 5px 0 0; }
+.CurDdl { background: url(/chain/507/images/shell/sprite.png) right -142px; }
+.CurSubDdl  { padding:12px 14px 10px; width:200px; background:#B7B3AB; border:0; margin:0 0 0 -14px; }
+.RoomSubDdl  { padding:12px 14px 10px; background:#B7B3AB; border:0; }
+.CurSubDdl li, .RoomSubDdl li { border-top:0; margin:0 0 8px; padding:0; }
+.CurSubDdl .CurCode { background:transparent; border:0; padding:0; display:inline; }
+.CurLink { display:inline; }
+.CurSubDdl a.TxTColor, .RoomSubDdl a.TxTColor { color:#FFF; }
+.CurSubDdl li:hover, .CurSubDdl li.hover, .RoomSubDdl li:hover, .RoomSubDdl li.hover { background:transparent; }
+.CurSubDdl li:hover a.TxTColor, .CurSubDdl li.hover a.TxTColor, .RoomSubDdl li:hover a.TxTColor, .RoomSubDdl li.hover a.TxTColor { color:#47413A; }
+.currency {
+	float: left;
+	margin-top:2px;
+}
+
+/* jQuery UI */
+.ui-dialog { padding:0 0 20px; }
+
+.ui-datepicker-cmd-prev, .ui-datepicker-cmd-next { width:15%; padding:3px 0; }
+.ui-datepicker-cmd-current, .ui-datepicker-cmd-today { width:70%; }
+
+.CalendarDiv .ui-datepicker-cmd-prev .ui-icon { margin:0 0 0 30px; }
+.CalendarDiv .ui-datepicker-cmd-next .ui-icon { margin:0 30px 0 0; }
+
+.ui-datepicker-multi .ui-datepicker-group.first, .ui-datepicker-multi .ui-datepicker-group.last { width:49%; }
+
+.AvailCalendar .ui-datepicker-header { margin:0 0 10px; }
+.ui-datepicker-group .ui-datepicker-header { padding:5px; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#2f2f2d; font-weight:bold; text-transform:none; }
+
+/* Criteria Step */
+.HotelDiv, .DatesDiv, .QuantitiesDiv, .CodesDiv, .FiltersDiv { width:250px; }
+.HotelDDL { max-width:220px; }
+.CheckAvail .calendars-wrapper input { width:214px !important; }
+.CheckAvail .CancelModifyLink, .CheckAvail .CallAgentLink, .CheckAvail .BARLink { width:277px; }
+
+.HotelDiv, .DatesDiv { margin:0 20px 0 0; padding:10px 14px 0; }
+.QuantitiesDiv { margin:0 20px 10px 0; padding:10px 14px 2px; }
+.CodesDiv{ margin:0 20px 0 0; padding:8px 14px 3px; }
+.FiltersDiv { margin:0 20px 10px 0; padding:4px 14px 1px; }
+.CodesContainer { padding:0 0 14px; }
+.CodesContainer { padding:0 0 11px; }
+.FiltersContainer { padding:0; }
+.RateFilterDiv, .RoomTypeDiv, .RoomFeatDiv { margin:0 0 9px; padding:0; border:0; }
+.LabelDdlCombo { padding:0 1.2em 12px 0; }
+.LabelDdlCombo label { font-weight:normal; text-transform:uppercase; }
+.Arrival { padding:0 0 12px; }
+.Departure, .Hotel { padding:0 0 14px; border-bottom:1px solid #d4d4d2; display:block; }
+.GuestRoomGroup .Children { padding:0 0 12px 0; }
+
+
+.CodesDiv .clear { height:1px; background:#d4d4d2; }
+.CodesContainer .clear { height:0; background:transparent; }
+.IataCode { padding:0; }
+
+.CalendarDiv { padding:0 0 12px; margin:0 0 10px; }
+.CalendarDiv .ui-datepicker-row-break, .CalLegend { padding:0 45px; }
+.LegendItem { font-size:0.85em; }
+.RefreshCal { display:none; }
+
+.HorizButtonLink { clear:both; float:none; margin:0; }
+.CancelModifyLink, .CallAgentLink, .BARLink { display:block; float:left; clear:left; text-align:right; margin:0 0 8px; }
+.CallAgentLink img { margin:0 7px 0 0; }
+
+
+/* Stay Summary */
+.YourStay, .FilterResults, .StayCheckout { width:220px; margin:0 20px 10px 0; }
+.SummaryDatesDiv .Hotel { display:none; }
+.SummaryInfoCombo { margin:0 0 15px; }
+.StaticDates, .SummaryQuantitiesDiv { margin:0 0 15px; border-bottom:1px solid #d6d5cf; }
+.ResultsRoomFilter { border-bottom:0; padding:0; margin:0 0 15px; }
+.StayLabel { padding:0 0 1px; display:block; }
+.calendars-wrapper input { width:170px !important; }
+.CancelModifyLink, .CallAgentLink, .BARLink { width:246px; }
+
+/* Edit Your Stay */
+.Nights { display:none; }
+.EditeDates .GuestRoomGroup { float:none; padding:14px 0 0; }
+.EditeDates .Rooms { padding:14px 1.2em 12px 0; }
+.EditOptionalFields { margin:0 0 14px; border:1px solid #D6D5CF; border-width:1px 0; padding:14px 0 0; }
+.EditFilters { margin:14px 0; border-bottom:1px solid #D6D5CF; }
+.ModifyStayBtn, .SaveModifySearch { margin:0; }
+
+/* Your Stay Compare page */
+.YourStayHorz .StaticDates, .YourStayHorz .SummaryQuantitiesDiv { margin:0; border-bottom:0; }
+
+/* Your Stay Packages & Checkout */
+.RoomTotalPrice { margin:0 0 20px; border:0; padding:0; }
+.RoomTotalTxt, .ItinTotalTxt { font-size:14px; padding:4px 0 0; }
+.CheckOutBtns { float:right; }
+.PriceBreackDownLink { margin:0; }
+
+/* Availability Results */
+.ResultsContainer { position:relative; }
+.ProductsList { padding:0; background:transparent; }
+.ProductsHeader { border:0; margin:20px 0 0; padding:10px 14px 0; }
+.ProductsList .ProductsHeader:first-child { margin:0; }
+.HeaderDesc { float:left; max-width:500px; margin: -15px 0 0; }
+.HeaderInfo .Policies { float:right; }
+.ViewProductsBtn { margin:10px 0 0; background:#c39122 url(/chain/507/images/shell/productarrow.png) no-repeat center right; padding:0 60px 0 40px; float: right; }
+.HideProductsBtn { margin:10px 0 0; background:#c1beb7 url(/chain/507/images/shell/productarrowup2.png) no-repeat scroll right center; padding:0 60px 0 40px; border:1px solid #d3d4cf; color:#FFF; float: right; border: 0; }
+.ProductsInCategory { padding:20px 14px 0; }
+.ProductContainer { padding:20px 0; border-bottom:0; border-top:1px solid #D6D5CF !important; position:relative; }
+.ProductImage { margin:33px 0 0; }
+.ProductImg { margin:0; padding:0; border:0 !important; }
+.MorePhotosLink { display:block; position:relative; z-index:50; margin:-30px 0 0; padding:35px 0 0;  background-position: right -716px; }
+.ProductImg, .CompareImg, .BEPkgImg { position:relative; z-index:49; }
+.ProductInfoContainer { width:417px; float:right; clear:right; margin:30px 0 0; min-height:106px; }
+.ProductName, .ProductNamePromo {left:0; position:absolute; top:16px; }
+.ProductNamePromo .PromoIcon, span.PromoMsg { display:none; }
+.ProductInfo { max-width:273px; display:block; float:left; }
+.CompareCheck { border:0; padding:0; margin:30px 0 0; }
+.CompareCheckbox { float:right; margin:0 0 0 5px; }
+.CompareCheckbox input { margin:0; }
+.CompareBtnProduct { float:right; margin:0; height:24px; padding:0 12px; font-size:12px; }
+.ProductDescription .ReadMoreLink { display:none; margin:20px 0 14px; }
+.ProductPriceGroup { position:absolute; top:18px; right:0; text-align:right; }
+.ProductPriceBreackDownLink { position:absolute; top:53px; right:0; }
+.ProductDescription { margin:0; }
+.SelectProduct { clear:right; text-align:left; margin:30px 0 0; float:right; }
+.SelectProductBtn { margin:0 0 10px 10px; padding:1px 12px; float: right; clear: both; }
+.SelectProduct .SelectProductBtn:first-child { margin:0 0 10px; }
+
+.NoAvailContainer { margin: 46px 0 0; padding: 10px 14px;}
+.ReturntoCriteria { margin: 0 0 10px; padding: 10px 14px; background: #FFF;}
+
+.ad-gallery { padding:0 10px 6px; margin:0 auto; width:auto !important; }
+#jqeasypanel { width:100%; left:0; padding:0; max-height:94%; overflow:auto; }
+
+/* Hotel list */
+.ResultsHotelList { background:transparent; padding:0; }
+.ListPaginationTop { border: 0; padding:0 0 20px; }
+.ListPaginationBtm { border: 0; padding:0; }
+.HotelList .HotelContainer { background:#FFFFFF; border:0; margin: 0 0 20px; padding: 10px 14px 14px; }
+.HotelList .HotelContainer:first-child { padding: 10px 14px 14px; }
+.HotelImg { margin:0 20px 0 0; width: 130px; display:none; }
+.HotelList .HotelName { text-transform:none; }
+#V111_C1_ReturnToHotelListPanel { position: absolute; right: 0; top: 36px; }
+
+
+/* Compare Page */
+.ComparePage .HotelNameAddress { left:0; top:136px; }
+.ReturntoResults { margin:20px 0 0 1em; }
+.ComparePageTitle { float:none; }
+#V111_C1_CompareProductsPanel .clear { display:none; } 
+.CompareRooms { padding:0; margin:0 0 25px; } 
+.CompareImg { padding:0; margin:6px 0 2px; border:0 !important; }
+.CompareItem { padding:0 14px; width:209px; }
+.CompareItem .MorePhotosLink { text-align:left; }
+.CompareTable .CompareItem { border-left:1px solid #B8B6AD; border-right:0; }
+.CompareTable .MoreAboutRoom { display:none; }
+.CompareTable tr:first-child .CompareItem { background:#8d897e; padding:12px 14px 10px; border-left:1px solid #f9f5ec; border-right:0; }
+.CompareTable tr td:first-child { border-left:0 !important; }
+.CompareTitle { margin:0; }
+.CompareClose { background:transparent; padding:0; margin:0 0 0 10px; border:0 !important; position:relative; top:-2px; right:-8px; }
+span.RoomView { display:none; }
+.CompareRoomDesc { padding:20px 0 20px 14px; }
+.CompareRateDesc { border:0; padding:0 0 40px; }
+.ComparePolicies { display:none; }
+.RoomPrice { text-align:right; padding:0 0 14px; }
+.RoomPrice .ProductPriceIncTax  { text-align:right; }
+.CompareSelect { float:right; clear:right; margin:0 0 10px; width:206px; padding:1px 0; text-align:center; }
+.PriceInfoLink { background-position:right -609px; }
+
+
+/* Packages */
+.AvailPackages .CurrencyDiv { right:0; top:102px; }
+.PkgTopNoThxBtn, .PkgBtmNoThxBtn { margin:0 10px 0 0; }
+.PackageHeader { border:0; margin:0; background:#8d897e; padding:8px 14px 6px; }
+.PackageList { margin:0 0 20px; padding:0 14px; }
+.PackageItem { padding:16px 0 0; border-bottom:0; border-top:1px solid #D6D5CF; overflow:hidden; position:relative; } 
+.PkgImageDiv { float:left; }
+.BEPkgImg { padding:0; border:0 !important; margin:0 20px 0 0; }
+.PkgItemContent { display:block; overflow:hidden; }
+.PkgNoAvailMsg { margin:0; width:300px; }
+.PkgDesc, .PkgPoliciesDiv { margin:0 0 20px; width:300px; }
+.PackageCheck { background:transparent; color:#716C5E; font-family:Arial,Helvetica,sans-serif; font-size:12px; margin:0; padding:0; position:absolute; right:0; text-transform:none; top:49px; }
+.PackageCheck input { float:right; margin:0 0 0 5px; position:relative; top:2px; }
+.PkgLabel { font-weight:normal; text-transform:uppercase; }
+.PkgPrice { margin:0; position:absolute; top:17px; right:0; }
+.PkgExtraInfo { margin:0 0 16px; }
+.PkgPrice .BigTxt1, .PkgExtraInfo .BigTxt1 { font-size:16px; }
+.PkgDateTime, .PkgGuest { margin:0 20px 20px 0; }
+.DateDiv { margin:0 !important; padding:0 !important; }
+.DynamicDate td, .DynamicDates td { vertical-align:middle; }
+.MonthYear, .Day, .WeekDay { margin:0; padding:3px 15px; border:0; } 
+.PkgPrice .IncludesTax { display: none; }
+
+/* Cluetip */
+.CluetipTitle { margin:0 0 14px; padding:0 0 10px; }
+.CluetipImg { border:0 !important; margin:0 0 14px 14px; padding:0; }
+.Cluetip ul { list-style:square; margin:0 0 0 20px; }
+
+
+/* Checkout */
+.GuestInfoHeader { border:0; margin:0; background:#8d897e; padding:8px 14px 6px; }
+.CheckoutForm  { background:#FFF; padding:0; margin:0 0 20px; overflow:hidden; }
+.Layout2ColCntrLine { display:none; }
+.CheckoutSubSection { padding:16px 14px; }
+.ReguisterUserLogin { margin:16px 14px 0; padding:0 0 14px; border-bottom:1px solid #D6D5CF; }
+.RegisteredLoginDiv .LoginID { padding:0 10px 0 0; } 
+.RegisteredLoginDiv .LoginPwd { padding:0; float: left; }
+.RegisteredLoginDiv .LoginBtn { margin:-10px 0 0 10px; }
+.RegisteredLoginDiv input.IdInput, .RegisteredLoginDiv input.PasswordInput { width:127px; }
+.GCountryDDL, .GStateDDL { max-width:90%; }
+
+.GCompanyName{ display:none !important; }
+#V112_C0_gi_AdditionalGuestsSectionHeaderCntrl_ToggleContainer { display:none; }
+.AdditionalGuests { margin:0; }
+
+.PaymentDiv { border:0;}
+.PaymentType { float:left; }
+.CardNumber { float:left; clear:left; }
+.CardExpiration { float:left; }
+.SaveApplyPayment { clear:both; }
+
+.AdditionalDetailsHeader { float:left; background:#8d897e; margin:0 0 0 14px; padding:6px 0 6px 12px; border:0; } 
+.AdditionalDetailsHeader .TitlewIconToggleDrk { margin:0; }
+.AdditionalDetailsHeader .ToggleArrowDiv_Off {margin:0 0 0 8px; padding:0; width:23px; background-position:right -259px; }
+.AdditionalDetailsHeader .ToggleArrowDiv_On {margin:0 0 0 8px; padding:0; width:23px; background-position:right -318px; }
+.AdditionalDetailsHeader .TxtTitle { color:#FFF; font-size:15px; }
+.AdditionalInfoDiv { clear:both; padding:20px 0 0; }
+.AdditionalInfoDiv .CheckoutSubSection { border:0; }
+.RmReqDDL1, .RmReqDDL2, .RmReqDDL3, .RmReqDDL4 { float:left; }
+.RmReqDDL3 { clear:left;}
+.RoomFeatureRequest { overflow:hidden;}
+.RequestComments { padding:0; }
+.TranspInst { clear:both; }
+
+.PolicyContainer { background:transparent; padding:0; }
+.PrivacyPolicy, .PrivacyPolicyAck, .ProductPoliciesLink, .PolicyAckDiv, .OptInOffers { background:#FFF; }
+.PolicyHeader { background:#8d897e; padding:8px 14px 6px; color:#FFF; margin:0; }
+.PolicyDiv, .ProductPoliciesLink { padding:14px; margin:0; }	
+.PrivacyPolicyAck, .PolicyAckDiv { padding:14px; overflow:hidden; margin:0 0 10px; }
+.OptInOffers { padding:14px; overflow:hidden; margin:0; display: none; }
+.PolicyAckDiv .CheckoutCheckbox { padding:0; text-indent:0; }
+.ProductPoliciesLink a, .PolicyAckDiv a { font-weight: bold; }
+
+.CheckoutValidation { border:1px solid #B21010; background:#ecd7d7; }
+
+.YourStay .ResStatus { margin:10px 0; }
+
+.RoomDdl .DDListCurrent { background-position:right -137px; }
+
+/* Reservation Review, Confirm & Modify */
+.ResReview .CurrencyDiv, .ResConfirm .CurrencyDiv, .ResModify .CurrencyDiv { right:0; top:98px; } 
+.ResModify .CurrencyDiv { right:0; top:68px; }
+.ResReview .HotelNameAddress, .ResConfirm .HotelNameAddress { left:0; } 
+
+.ReservationsContainer .TitleSz1 { display:none; }
+.ReservationDiv .TitleSz2 { display:block; margin:0; background:#8d897e; padding:8px 14px 6px; }
+.ReviewDiv, .ConfirmationDiv { padding:0; background:#FFF; }
+.ResDetailCntrLine { display:none; }
+.ReservationDiv { padding:0; position:relative; }
+.ResImgDiv { padding:18px 20px 0 14px; }
+.ResRoomImg { margin:0 0 14px; padding:0; border:0 !important; }
+.ReservationDetails { padding:16px 14px 0; } 
+.ReservationDiv .ResStatus { display:block; margin:5px 0 0 14px; }
+.ReservationDetails .TitleSz2 { background:transparent; padding:0; margin:0 0 6px; color:#986a02; font-size:16px; }
+.ResRoom, .ResRate, .ResCredential, .ResPackage, .ResLoyalty, .ResPurpose, .ResRequests, .ResTransportation { margin:0 0 10px; }
+.ResCheckIn, .ResCheckOut {margin:0 0 7px;}
+.ResProductExtraInfo { padding:0; }
+.ResCheckIn .TxtClrBold, .ResCheckOut .TxtClrBold, .ResProductLabelClear, .ResProductLabel {display:block;padding:0 0 2px; float:none;}
+.ResProductTxt {padding:0;}
+.ResBtnDiv { position:absolute; right:14px; top:3px; }
+.ResBtnDiv span { display:block; margin:0; float:left; }
+.ResBtnDiv .ButtonSt4 { margin:0 0 0 10px; } 
+.ResBottomBtns input { margin:0 0 0 10px; }
+.ResConfirm .PolicyDiv, .ResConfirm .ProductPoliciesLink, .ResModify .PolicyDiv, .ResModify .ProductPoliciesLink { padding:10px 14px 16px; margin:0; }
+.ResTransportation .TxtItalic { display:inline-block; width:120px;}
+
+.ConfirmationDiv .TitlewBkgDrk.TitleSz1 { padding:10px 14px; margin:0; }
+
+.CancelledMsg, .LateModMsg, .ResMsg { margin:10px 14px 0; }
+
+.ui-dialog .ui-dialog-buttonpane { border:0; }
+
+.AlmostThereHeader {background: url("/chain/507/images/shell/footer-bg.png") repeat-y 50% 0 #D6D5CF;}
+.AlmostThereMsg, .NoResMsg { background: url("/chain/507/images/shell/footer-bg.png") repeat-y 50% 0 #D6D5CF; margin: 0; padding: 0 0 20px; }
+
+.ActDdl { margin: 7px 0 0; }
+.ActDdl .DDListCurrent { color: #FFF; background-position: right -456px; padding: 0.15em 23px 0.15em 0; background-image: url("/chain/507/images/shell/sprite.png") }
+
+/* Search Reservation */
+.ResSearch, .ResResults { background:transparent; padding:0; }
+.NotFoundMessage, .SearchbyConfirmNmbr, .SearchbyPwd, .ResSearchForgotPwd, .ResRsltsItemGroup { padding:10px 14px; background:#FFF; margin:0; border:0; }
+.ResRsltsItemGroup { margin:0 0 10px !important;}
+.SearchbyConfirmNmbr, .SearchbyPwd { float:left; width:432px; height:208px; }
+.SearchbyConfirmNmbr { margin:0 20px 0 0;}
+.SearchbyPwd .SearchEmail, .SearchbyConfirmNmbr .SearchEmail { float:none; clear:both; padding:0 0 12px 0; display:block; }
+.SearchPwd, .SearchConfirmNmbr { padding:0; display:block; }
+.SearchByPwd, .SearchByConfirmNo { float:none; clear:both; margin:14px 0 0; display:block; }
+.SearchPwd .ForgotPwdLink { margin:14px 0 0; padding:14px 0 4px; border-top:1px solid #d6d5cf;}
+.SearchErrorMsg .ErrorMsg { border:1px solid #B21010; background-color:#ecd7d7; background-position:4px -540px; margin:0 0 10px; padding:10px 14px 10px 33px; }
+.SearchbyPwd { display: none; }
+
+
+/* Popups */
+.PDtlTTLabel { vertical-align:middle; }
+.PDtlInfoRoomLabel, .PDtlInfoRateLabel { display:block; padding:0 0 1px; }
+#PopupContainer ul { list-style:square; margin:0 0 0 20px; }
+#PopupContainer ul.ad-thumb-list { list-style:none !important; margin:0; min-width:100%; }
+.ModalImg, .InfoPopRoomImg { border:0 !important; margin:0 0 14px 14px; padding:0; width:150px; float:right; display:block; } 
+
+.CluetipTitle .PackageTitle { padding:0; }
+
+#cluetip-close { padding:10px 14px; }
+.ClueTipCloseImg { background-position:-51px -650px; }
+
+/* Login Modal */
+.LoginModal { position: relative; }
+.ModalLoginBtn { left: 214px; margin: 0; position: absolute; top: 62px; }
+.LoginModal .clear.BorTp2, .CreateProfileLink { display: none; }
+.ModalForgotPwdLink { margin: 0; }
+.ModalProfile { margin:10px 0 0; padding: 10px 0 0; }
+
+/* Modify Toolbar */
+.AvailResults .ModifyToolbar, .AvailPackages .ModifyToolbar, .CustInfo .ModifyToolbar { clear:left; float:left; margin:0 20px 10px 0; width:220px; }
+.AvailResults .ModTBStatus, .AvailPackages .ModTBStatus, .CustInfo .ModTBStatus { display:block; padding:0; margin:0 0 15px; }
+.AvailResults .ModTBConfirmNo, .AvailPackages .ModTBConfirmNo, .CustInfo .ModTBConfirmNo { display:block; padding:0; margin:0; padding:0 0 15px; border-bottom:1px solid #D6D5CF; }
+.ModifyToolbar .ButtonSt4 { margin: 15px 0 0; }
+
+/* Price Breakdown Popup */
+.PDtlTTFee, .PDtlTTTax { display:none; }
+
+/* Temp fix to hide top/left image border */
+.ProductImage, .ComparePhoto, .PkgImageDiv { overflow:hidden; }
+.ComparePhoto { margin:6px 0 0; }
+.ProductImg, .CompareImg, .BEPkgImg { top:-1px; left:-1px; }
+.ComparePhoto { margin:0 0 2px; }
+
+/* Hide Profile Info */
+.ProfileLink, .SavedCC {display:none;}
+
+/* Enhance Your Stay font change */
+.PkgInst.TxtSmlLt { font-size:12px;}
+
+
+/*hide calendar legend items*/
+.CalLegend .MS, .CalLegend .MxS, .CalLegend .NAr, .CalLegend .NDp {display:none !important;}
+
+/*change multi room/itin booking text color on checkout step*/
+.RoomDdl .TitleSz1 { color: #A87401; }
+.CheckoutRoomSelect .CheckoutCheckbox.TxtLt { color: #47413a; }

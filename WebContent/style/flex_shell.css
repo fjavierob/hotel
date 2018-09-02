@@ -1,0 +1,206 @@
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+footer, header, nav, section { display: block; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html.video { /* Override global '.video' styles (line 712). 'video' class is placed on the the html tag via modernizer script */
+    background: none repeat scroll 0 0 transparent;
+    padding-right: 0;
+} 
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+.ui-widget-content body { background:transparent; }
+
+body,  input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #47413a; color: #fff; text-shadow: none; }
+::selection { background: #47413a; color: #fff; text-shadow: none; }
+
+
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+a:hover, a:active { outline: 0; }
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Headings
+   ========================================================================== */ 
+
+h1, h2, h3, h4, h5, h6 { margin-top: 0; padding: 0; font-weight: normal; } 
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+label { cursor: pointer; }
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+button, input { line-height: normal; *overflow: visible; -webkit-border-radius:0; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+
+/* ==|== primary styles =====================================================
+   ========================================================================== */
+
+
+body {color: #716c5e; background: #d6d5cf url(/chain/507/images/shell/footer-bg.png) 50% 0 repeat-y; }
+body a { color: #716c5e; }
+body a:hover { color: #47413a; }
+
+#page-wrap { background: url(/chain/507/images/shell/hotel-utility-bg.png) 0 0 repeat-x; min-width: 1024px; }
+#main:before, #main:after { content: ""; display: table; }
+#main:after { clear: both; }
+#main { width:940px; margin:0 auto; position:relative; padding:0 0 15px; }
+
+header { width: 100%; height:150px; background: url(/chain/507/images/shell/header-dropshadow.png) 0 100% repeat-x;}
+header ul { padding: 0; margin: 0; list-style: none; }
+header li { float: left; }
+#header { width:941px; height: 100%; margin:0 auto; letter-spacing: 0.3px;}
+#header-lists {height: 30px; color:#d6d5cf; margin-bottom:13px;}
+#header-lists nav { position: static; float: left; }
+#header-lists a {color:#d6d5cf; }
+#header-lists a:hover { color: #c39122; }
+#info-list { float:left; height:100%; margin-left: -12px; }
+#info-list li a { font-size:12px; }
+#header-lists li a { display: block; padding: 8px 12px 4px; height: 18px; text-decoration:none; }
+#header-lists li.more-action.hover { background-color: #1d1915; }
+#header-lists li div.sub-menu { display: none; overflow: hidden; padding: 12px 0 10px; position: absolute; z-index: 999;}
+/*#header-lists li.hover div.sub-menu { display: block; background: url(/chain/507/images/shell/global-dd-bg.png) 0 0; }*/
+#header-lists li.hover div.sub-menu { display: block; background: #1d1915; }
+
+#header-lists li div.sub-menu section { width: 196px; padding: 0 14px; float: left; }
+#header-lists li section h1 { color: #c39122; margin: 0; font-size: 15px; }
+#header-lists li section li { clear: both; margin-bottom: 8px; }
+#header-lists li section a { padding: 0; display: inline; }
+#global-list {float:right; height:100%;}
+
+#global-list li a {padding-left: 15px; padding-right: 15px; }
+#global-list li a { font-size:12px;}
+
+#global-list li.book-stay {background:url(/chain/507/images/shell/book-stay.png) 0 0 repeat; height:100%; margin-top:0; font-size: 21px; padding: 0; }
+#global-list li.book-stay a { display: block; height: 27px; text-align: center; padding: 3px 14px 0; color:#fff;}
+.oldie #global-list li.book-stay a:hover { color:#fff;}
+
+footer { width: 100%; min-height:100px; background: url(/chain/507/images/shell/footer-dropshadow.png) 0 0 repeat-x; margin: 0 0 30px 0;}
+#footer { width:941px; height: 100%; margin:0 auto; padding: 5px 0; position: relative; font-family: Arial, Helvetica,sans-serif; color: #716c5e; font-size: 11px; }
+#footer nav.navgroup, #footer div.navgroup { padding: 10px 10px 7px 10px;}
+#footer div.navgroup { padding: 10px 10px 7px 1px;}
+#footer nav.navgroup { display: block;  clear: both;}
+#footer #copyright { padding-right:1px; }
+#footer nav { overflow: hidden; border-bottom: 1px solid #afada4; }
+#footer nav ul {  margin-left:-8px; }
+#footer nav ul.right {  margin-right:-8px; }
+#footer nav li { margin: 0 6px; padding-left: 16px; float: left; background: url(/chain/507/images/shell/footer-bullet.png) no-repeat scroll 0 5px; }
+#footer nav li a { display: block; padding-bottom: 0px; text-decoration:none; }
+#footer nav li.social a { display:block; float:left; padding-left:4px; }
+#footer nav li.social img { margin-top:-5px; }
+
+#footer nav li.first {padding-left:0; background: 0; margin-left:0; }
+
+#info {overflow:hidden; position:relative; height:107px; }
+#info,
+#info a { color: #47413a; }
+#info #logo { float:left; padding-top:1px; }
+#info #logo a { float: left; }
+#hotel-info { float:right; font-size: 14px; font-style: normal; }
+#hotel-info li {padding:0 10px; border-left: 1px solid;}
+#hotel-info li.last {padding:0 0 0 10px; border-left: 1px solid;}
+#hotel-info a.map { padding-left: 16px; background:url(/chain/507/images/shell/maps-directions.png) 0 0 no-repeat; text-decoration:none;}
+#hotel-info li.first {padding-left:0; border-left: 0;}
+header nav { position: absolute; bottom: 14px; right: 0; }
+#main-nav { float:right; height: 21px; font-size: 14px; }
+#main-nav li { margin: 0 12px;}
+#main-nav li a { display: block; padding-bottom: 3px; text-decoration:none; }
+#main-nav li a:hover { color: #47413a; padding-bottom: 3px; border-bottom: 1px solid #47413a; }
+.corpglobal #main-nav li a:hover { border-bottom-color: #fff; }
+#main-nav li.active a:hover { padding-bottom: 3px; }
+#main-nav li.last { margin-right:0px; }
+
+
+header.globalsubpage { background: url("/chain/507/images/shell/bg-header-dark.png") repeat-x;}
+header.globalsubpage  #info, header.globalsubpage #info a { color: #fff; }
+header.globalsubpage  #global-list li { letter-spacing: 0.02em; }
+header.globalsubpage  #global-list li.book-stay { letter-spacing: 0.035em; }
+.globalsubpage #global-list li a { padding-right:12px;padding-left:12px }
+.globalsubpage #global-list li.book-stay a { padding-right:14px;padding-left:15px; }
+.globalsubpage #main-nav li { letter-spacing: 0.03em; }
+.globalsubpage #main-nav li.active a { border-bottom:1px solid #fff; }
+
+
+
+.left { float: left; }
+.right { float: right; }
+
+
+div#page-wrap .didot-reg, 
+div#page-wrap .didot-reg a { color: #fff; font-size:20px; letter-spacing:-0.05em; }
+
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  
+  #main-contents { float:none !important; margin:auto !important;}
+}

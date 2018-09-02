@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+  <!-- Parte utilizada en el apartado de Servlets -->
+  <servlet>
+    <servlet-name>ServletEj1</servlet-name>
+    <servlet-class>ServletFecha</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ServletEj1</servlet-name>
+    <url-pattern>/servlets/ServF</url-pattern>
+  </servlet-mapping>
+  <!-- Fin de la parte utilizada en el apartado de Servlets -->
+
+
+  <!-- El resto es la parte utilizada en el apartado de JSP -->
+  <display-name>Ejemplos de JSP</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>parametroContexto1</param-name>
+    <param-value>valor del parámetro de contexto1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>parametroContexto2</param-name>
+    <param-value>valor del parámetro de contexto2</param-value>
+  </context-param>
+  
+  <servlet>
+    <servlet-name>jsp</servlet-name>
+    <!-- <jsp-file>/config/index.jsp</jsp-file> -->
+    <init-param>
+      <param-name>ejemploInitParam</param-name>
+      <param-value>valor1</param-value>
+    </init-param>
+    <init-param>
+      <param-name>otroInitParam</param-name>
+      <param-value>otro valor</param-value>
+    </init-param>
+  </servlet>
+  <!-- Las siguientes directivas indican que si se encuentra un error 404 (recurso no encontrado) o
+       se lanza una excepción cualquiera (todas derivan de java.lang.Throwable) se redirija la 
+       petición a la página /exception/error.jsp -->	
+  <error-page>
+    <error-code>404</error-code>
+    <location>/jsp/exception/error.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/jsp/exception/error.jsp</location>
+  </error-page>
+</web-app>
